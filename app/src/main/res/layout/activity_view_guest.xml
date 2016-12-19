@@ -145,5 +145,15 @@
             fab:fab_colorPressed="@color/btn_primary_pressed"
             fab:fab_label="@string/viewguest_fab_menu_refresh"
             fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btn_fab_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info_outline_white_24dp"
+            fab:fab_colorNormal="@color/btn_primary"
+            fab:fab_colorPressed="@color/btn_primary_pressed"
+            fab:fab_label="@string/viewguest_fab_menu_log"
+            fab:fab_size="mini" />
     </com.github.clans.fab.FloatingActionMenu>
 </RelativeLayout>

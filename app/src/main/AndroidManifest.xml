@@ -12,9 +12,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<activity android:name=".extra.TestApplyActivity">-->
+
+        <!-- <activity android:name=".extra.TestApplyActivity"> -->
         <activity android:name=".LoginMainActivity">
-        <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -39,7 +40,8 @@
             </intent-filter>
         </receiver>
 
-        <!--<activity android:name=".extra.TestApplyActivity"></activity>-->
+        <!-- <activity android:name=".extra.TestApplyActivity"></activity> -->
+        <activity android:name=".LogActivity"></activity>
     </application>
 
 </manifest>

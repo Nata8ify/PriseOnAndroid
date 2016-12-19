@@ -305,7 +305,7 @@ public class ViewGuestActivity extends AppCompatActivity {
 
     private int sortingType;
 
-    @OnClick({R.id.btn_fab_add, R.id.btn_fab_sort, R.id.btn_fab_filter, R.id.btn_fab_refresh, R.id.btn_fab_operation_root})
+    @OnClick({R.id.btn_fab_add, R.id.btn_fab_sort, R.id.btn_fab_filter, R.id.btn_fab_refresh, R.id.btn_fab_operation_root, R.id.btn_fab_log})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_fab_add:
@@ -410,6 +410,9 @@ public class ViewGuestActivity extends AppCompatActivity {
                 break;
             case R.id.btn_fab_refresh:
                 update();
+                break;
+            case R.id.btn_fab_log :
+
                 break;
         }
     }

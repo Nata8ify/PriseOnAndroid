@@ -74,6 +74,7 @@
     <string name="viewguest_fab_menu_filter">กรอง</string>
     <string name="viewguest_fab_menu_add">เพิ่ม</string>
     <string name="viewguest_fab_menu_refresh">รีเฟรช</string>
+    <string name="viewguest_fab_menu_log">Log</string>
     <string name="viewguest_txt_title_guestlist">ข้อมูลผู้เข้าร่วมงาน</string>
     <string name="viewguest_txt_title_event_desc">รายละเอียด :</string>
     <string name="viewguest_txt_title_event_title">อีเวนต์ :</string>
