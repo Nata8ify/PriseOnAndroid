@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.trag.quartierlatin.prise">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--<activity android:name=".extra.TestApplyActivity">-->
+        <activity android:name=".LoginMainActivity">
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".WelcomeMenuActivity" />
+        <activity android:name=".ViewGuestActivity" />
+        <activity android:name=".ViewEventActivity" />
+        <activity android:name=".EditGuestActivity" />
+        <activity android:name=".InsertGuestActivity" />
+        <activity android:name=".InsertEventActivity" />
+        <activity android:name=".SortingDialog" />
+        <activity
+            android:name=".OptionActivity"
+            android:configChanges="locale" />
+        <activity android:name=".AboutActivity" />
+
+        <receiver android:name=".extra.ConnectionListener">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!--<activity android:name=".extra.TestApplyActivity"></activity>-->
+    </application>
+
+</manifest>

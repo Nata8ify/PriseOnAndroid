@@ -1,0 +1,210 @@
+<resources>
+    <string name="app_name">Prise</string>
+
+    <!--LoginMainActivity-->
+    <string name="login_login">Login</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_login_or_signup">Login</string>
+    <string name="login_login_not_complete">Please accomplished the Login form.</string>
+    <string name="login_login_no_user">Incorrect Username or Password.</string>
+    <string name="login_createacc"><u>Register</u></string>
+    <!--LoginMainActivity-->
+    <!--SignupActivity-->
+    <string name="signup_signup">Signup</string>
+    <string name="signup_username">Enter Username</string>
+    <string name="signup_password">Enter Password</string>
+    <string name="signup_signup_now">Signup Now</string>
+    <!--SignupActivity-->
+    <!--WelcomeMenuActivity-->
+    <string name="welcome_welcome">Welcome!</string>
+    <string name="welcome_view_guest">Event</string>
+    <string name="welcome_create_privilage">Create Privilege</string>
+    <string name="welcome_option">Option</string>
+    <string name="welcome_to_option">To Change Applications Setting.</string>
+    <string name="welcome_to_about">Provides a Details about this Application.</string>
+    <string name="welcome_to_view_event">To View Your Events Information and Details.</string>
+    <string name="welcome_to_priviledge">00000000</string>
+    <string name="welcome_about">About</string>
+
+
+    <string name="welcome_alrtquit_title">Quit</string>
+    <string name="welcome_alrtquit_message">Do you want to quit now?</string>
+    <!--WelcomeMenuActivity-->
+    <!--ViewGuestActivity-->
+    <string name="viewguest_award_progression_bow">Award Progression -></string>
+    <string name="viewguest_award">Award : </string>
+    <string name="viewguest_seat_row_title">Row :</string>
+    <string name="viewguest_seat_no_title">Seat No. : </string>
+    <!--ViewGuestActivity-->
+
+    <!--ViewEventActivity-->
+    <string name="viewevent_viewevent">Your Event</string>
+    <string name="viewevent_">Your Event</string>
+    <!--sharing_dialog-->
+    <string name="shre_event_title">$Title</string>
+    <string name="shre_event_to">To: </string>
+    <string name="shre_event_by">By: </string>
+    <string name="shre_event_by_you">You</string>
+    <string name="shre_event_alert_deltitle">Cancel Sharing with </string>
+    <string name="shre_event_hint_addusr">Share this Event To... </string>
+    <string name="shre_event_hint_space">Type *SPACE* to Completing the username.</string>
+    <!--sharing_dialog-->
+    <!--ViewEventActivity-->
+
+    <!--ViewGuestActivity-->
+    <string name="viewguest_dialog_item1_view">Information</string>
+    <string name="viewguest_dialog_item2_changestatus">Update Status</string>
+    <string name="viewguest_dialog_item3_editinfo">Edit</string>
+    <string name="viewguest_dialog_item4_deleteguest">Delete</string>
+    <string name="viewguest_info_seatrow">Seat Row:</string>
+    <string name="viewguest_info_seatno">Seat Number:</string>
+    <string name="viewguest_info_guestname">Name:</string>
+    <string name="viewguest_info_corp">Corp:</string>
+    <string name="viewguest_info_position">Position:</string>
+    <string name="viewguest_info_award">Award:</string>
+    <string name="viewguest_info_awardno">Award Number:</string>
+    <string name="viewguest_info_status">Status:</string>
+    <string name="viewguest_status_ready">Ready</string>
+    <string name="viewguest_status_absent">Absent</string>
+    <string name="viewguest_status_unready">Unready</string>
+    <string name="viewguest_status_quited">Quited</string>
+    <string name="viewguest_status_received">Award Received</string>
+    <string name="viewguest_alrt_longclick_wannadelete">This action will delete this guest from this event.</string>
+    <string name="viewguest_fab_menu_sort">Sort</string>
+    <string name="viewguest_fab_menu_filter">Filter</string>
+    <string name="viewguest_fab_menu_add">Add</string>
+    <string name="viewguest_fab_menu_refresh">Refresh</string>
+    <string name="viewguest_txt_title_guestlist">Member Informations</string>
+    <string name="viewguest_txt_title_event_desc">Description :</string>
+    <string name="viewguest_txt_title_event_title">Event :</string>
+    <string name="viewguest_txt_title_event_details">Event Details</string>
+    <string name="viewguest_txt_no_connection">No Internet Connection Found.</string>
+    <string name="viewguest_txt_got_connection">Internet Connection is Established Now.</string>
+    <!--ActionLogDialog-->
+    <string name="viewguest_dialog_logtype_11">Going to the seat.</string>
+    <string name="viewguest_dialog_logtype_12">Quiting from the event.</string>
+    <string name="viewguest_dialog_logtype_13">Already at seat.</string>
+    <string name="viewguest_dialog_logtype_50">Ready to Receive the Award.</string>
+    <string name="viewguest_dialog_logtype_51">Unready to Receive the Award.</string>
+    <string name="viewguest_dialog_logtype_54">Already Quited the event.</string>
+    <!--ActionLogDialog-->
+    <!--ViewGuestActivity-->
+
+    <!--EditGuestActivity-->
+    <string name="editguest_seatrow">Seat Row (Alphabet or Number)</string>
+    <string name="editguest_seatno">Seat Number (Only number allowed)</string>
+    <string name="editguest_guestname">*Name and Lastname</string>
+    <string name="editguest_guestcorp">Corperation</string>
+    <string name="editguest_guestposition">Position</string>
+    <string name="editguest_award">*Award</string>
+    <string name="editguest_awardno">*Award Progression</string>
+    <string name="spnr_status">---Status---</string>
+    <string name="editguest_alrt_finish_title">Done!</string>
+    <string name="editguest_alrt_finish_message"></string>
+    <!--EditGuestActivity-->
+
+    <!--EditGuestActivity-->
+    <string name="btn_submit">Submit</string>
+    <string name="btn_reset">Reset Form</string>
+    <!--EditGuestActivity-->
+    <!--InsertGuestActivity-->
+    <string name="insertguest_txt_statusspnr">Status</string>
+    <string name="insertguest_alrt_empty_title">Award Number is Empty</string>
+    <string name="insertguest_alrt_empty_message">Some necessary information such as Guest Name, Award, AwardNo must be filled</string>
+    <!--InsertGuestActivity-->
+
+    <!--InsertEventActivity-->
+    <string name="insertevent_txt_titlehint">*Event Name</string>
+    <string name="insertevent_txt_deschint">Description</string>
+    <!--InsertEventActivity-->
+
+    <!--ExtraUtils-->
+    <string name="extra_no_connection">Please turn on WIFI or Mobile Data</string> <!--ExtraUtils-->
+    <!--ExtraUtils-->
+
+    <!--CustomRow_Guest-->
+    <string name="row_guest_alrtstatus_title">Select current status</string>
+    <!--CustomRow_Guest-->
+    <!--Sorting_dialog-->
+    <string name="txt_sorting_sort_type">Sort Types</string>
+    <string name="txt_sorting_sort_type_desc">Descending</string>
+    <string name="txt_sorting_sort_type_asc">Ascending</string>
+    <string name="txt_sorting_sort_by_awardno">Award Number</string>
+    <string name="txt_sorting_sort_by_award">Award</string>
+    <string name="txt_sorting_sort_by_name">Name</string>
+    <string name="txt_sorting_sort_by_corp">Corporation</string>
+    <string name="txt_sorting_sort_by_position">Position</string>
+    <string name="txt_sorting_sort_by_seatrow">Seat Row</string>
+    <string name="txt_sorting_sort_by_seatno">Seat Number</string>
+    <string name="txt_sorting_sort_by_seat">Seat</string>
+    <string name="txt_sorting_sort_by_status">Status</string>
+    <string name="txt_sorting_sort_by_guestno">Guest Number</string>
+    <string name="txt_sorting_sort_by">Sorted By...</string>
+
+    <!--<string name="txt_sorting_sort_typeby">Sorted By</string>-->
+    <!--Sorting_dialog-->
+
+    <!--Filter Dialog-->
+    <string name="txt_filter_by">Filtered By...</string>
+    <string name="txt_filter_by_awardno">Award Number</string>
+    <string name="txt_filter_by_award">Award</string>
+    <string name="txt_filter_by_name">Name</string>
+    <string name="txt_filter_by_corp">Corporation</string>
+    <string name="txt_filter_by_position">Position</string>
+    <string name="txt_filter_by_seatrow">Seat Row</string>
+    <string name="txt_filter_by_seatno">Seat Number</string>
+    <string name="txt_filter_by_seat">Seat</string>
+    <string name="txt_filter_by_guestno">Guest Number</string>
+    <string name="txt_filter_by_status">Status</string>
+    <string name="txt_filter_by_all">Show All</string>
+    <!--Filter Dialog-->
+
+    <!---->
+    <string name="dismiss">Dismiss</string>
+    <string name="close">Close</string>
+    <string name="delete">Delete</string>
+    <string name="submit">Submit</string>
+    <string name="acknowledge">Acknowledge</string>
+    <string name="goback">Back</string>
+    <string name="okay">Okay</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="progress">"In Progress..."</string>
+    <string name="title_activity_test_nav">TestNavActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="areyousure">Are you sure?</string>
+    <!---->
+    <array name="status">
+        <item>Ready</item>
+        <item>Unready</item>
+        <item>Absent</item>
+        <item>Received</item>
+        <item>Quited</item>
+    </array>
+    <array name="sorting_list">
+        <item>Award Number</item>
+        <item>Award</item>
+        <item>Name</item>
+        <item>Corp</item>
+        <item>Position</item>
+        <item>Seat Row</item>
+        <item>Seat Number</item>
+    </array>
+
+    <!--OptionActivity-->
+    <string name="option_choose_th">ภาษาไทย</string>
+    <string name="option_choose_en">English</string>
+    <string name="option_lang_title">Choose a language.</string>
+    <array name="option_lang_ary">
+        <item>English</item>
+        <item>ภาษาไทย</item>
+    </array>
+    <string name="option_pls_restart">To complete this changes. Please restart this application.</string>
+
+    <!--OptionActivity-->
+</resources>

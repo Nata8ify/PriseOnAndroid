@@ -1,0 +1,211 @@
+<resources>
+    <string name="app_name">บางมดมอบโล่</string>
+
+    <!--LoginMainActivity-->
+    <string name="login_login">เข้าสู่ระบบ</string>
+    <string name="login_username">ระบชื่อุผู้ใช้งาน</string>
+    <string name="login_password">ระบุรหัสผ่าน</string>
+    <string name="login_login_or_signup">เข้าสู่ระบบ</string>
+    <string name="login_login_not_complete">กรุณากรอกชื่อผู้ใช้งานหรือรหัสผ่านให้ครบถ้วน</string>
+    <string name="login_login_no_user">ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง</string>
+    <string name="login_createacc"><u>ลงทะเบียน</u></string>
+    <!--LoginMainActivity-->
+    <!--SignupActivity-->
+    <string name="signup_signup">เปิดบัญชีใหม่</string>
+    <string name="signup_username">กรุณาระบชื่อุผู้ใช้งาน</string>
+    <string name="signup_password">กรุณาระบุรหัสผ่าน</string>
+    <string name="signup_signup_now">ลงทะเบียน</string>
+    <!--SignupActivity-->
+    <!--WelcomeMenuActivity-->
+    <string name="welcome_welcome">ยินดีตอนรับ!</string>
+    <string name="welcome_view_guest">อีเวนต์</string>
+    <string name="welcome_create_privilage">สร้างสิทธิ์</string>
+    <string name="welcome_option">ตั้งค่า</string>
+    <string name="welcome_alrtquit_title">ออกจากระบบ</string>
+    <string name="welcome_to_about">ข้อมูลเกี่ยวกับแอพพลิเคชั่นนี้.</string>
+    <string name="welcome_alrtquit_message">คุณต้องการจะออกจากแอพพลิเคชั่นใช่ไหม?</string>
+    <string name="welcome_to_option">เปลี่ยนแปลงการตั้งค่าในแอพพลิเคชั่น</string>
+    <string name="welcome_to_view_event">แสดงข้อมูลและรายละเอียดภายในอีเวนต์ของคุณ</string>
+    <string name="welcome_to_priviledge">00000000</string>
+    <string name="welcome_about">เกี่ยวกับแอพ</string>
+
+    <!--WelcomeMenuActivity-->
+    <!--ViewGuestActivity-->
+    <string name="viewguest_award_progression_bow">ลำดับเข้ารับรางวัล -></string>
+    <string name="viewguest_award">รางวัล : </string>
+    <string name="viewguest_seat_row_title">แถวที่นั่ง :</string>
+    <string name="viewguest_seat_no_title">เลขที่นั่ง : </string>
+    <!--ViewGuestActivity-->
+
+    <!--ViewEventActivity-->
+    <string name="viewevent_viewevent">อีเวนต์ของคุณ</string>
+    <string name="viewevent_">อีเวนต์ของคุณ</string>
+    <!--sharing_dialog-->
+    <string name="shre_event_title">$Title</string>
+    <string name="shre_event_to">ถึง: </string>
+    <string name="shre_event_by">โดย: </string>
+    <string name="shre_event_by_you">คุณ</string>
+    <string name="shre_event_alert_deltitle">ยกเลิกการใช้เหตุการณ์ร่วมกันกับ</string>
+    <string name="shre_event_hint_addusr">ใส่ Username ของผู้ต้องการแบ่งปันเหตุการณ์นี้</string>
+    <string name="shre_event_hint_space">พิมพ์ว้นวรรคเพื่อสำเร็จการแชร์ถึงบุคคลนั้น</string>
+    <!--sharing_dialog-->
+    <!--ViewEventActivity-->
+
+    <!--ViewGuestActivity-->
+    <string name="viewguest_dialog_item1_view">แสดงข้อมูล</string>
+    <string name="viewguest_dialog_item2_changestatus">เปลี่ยนสถานะ</string>
+    <string name="viewguest_dialog_item3_editinfo">แก้ไข</string>
+    <string name="viewguest_dialog_item4_deleteguest">ลบออกจากระบบ</string>
+    <string name="viewguest_info_seatrow">แถวที่นั่ง:</string>
+    <string name="viewguest_info_seatno">เลขที่นั่ง:</string>
+    <string name="viewguest_info_guestname">ชื่อ-นามสกุล:</string>
+    <string name="viewguest_info_corp">บริษัท/องกรค์:</string>
+    <string name="viewguest_info_position">ตำแหน่ง:</string>
+    <string name="viewguest_info_award">รางวัล:</string>
+    <string name="viewguest_info_awardno">ลำดับเข้ารับรางวัล:</string>
+    <string name="viewguest_info_status">สถานะ:</string>
+    <string name="viewguest_status_ready">พร้อม</string>
+    <string name="viewguest_status_absent">ไม่มา</string>
+    <string name="viewguest_status_unready">ไม่พร้อม</string>
+    <string name="viewguest_status_quited">ออกจากงานแล้ว</string>
+    <string name="viewguest_status_received">รับรางวัลแล้ว</string>
+    <string name="viewguest_alrt_longclick_wannadelete">ผู้เข้าร่วมงานจะถูกลบออกไปจากระบบ.</string>
+    <string name="viewguest_fab_menu_sort">เรียง</string>
+    <string name="viewguest_fab_menu_filter">กรอง</string>
+    <string name="viewguest_fab_menu_add">เพิ่ม</string>
+    <string name="viewguest_fab_menu_refresh">รีเฟรช</string>
+    <string name="viewguest_txt_title_guestlist">ข้อมูลผู้เข้าร่วมงาน</string>
+    <string name="viewguest_txt_title_event_desc">รายละเอียด :</string>
+    <string name="viewguest_txt_title_event_title">อีเวนต์ :</string>
+    <string name="viewguest_txt_title_event_details">รายละเอียดอีเวนต์</string>
+    <string name="viewguest_txt_no_connection">ไม่สามารถเชื่อมต่อกับอินเตอร์เน็ต</string>
+    <string name="viewguest_txt_got_connection">สามารถเชื่อมถึงอินเตอร์เน็ตได้แล้ว</string>
+    <!--ActionLogDialog-->
+    <string name="viewguest_dialog_logtype_11">กำลังเดินทางไปที่นั่ง</string>
+    <string name="viewguest_dialog_logtype_12">กำลังพาออกจากงาน</string>
+    <string name="viewguest_dialog_logtype_13">ถึงที่นั่งเรียบร้อย</string>
+    <string name="viewguest_dialog_logtype_50">พร้อมเข้ารับรางวัล</string>
+    <string name="viewguest_dialog_logtype_51">ยังไม่สะดวกข้ารับรางวัล</string>
+    <string name="viewguest_dialog_logtype_54">เดินทางกลับบ้านเรียบร้อบแล้ว</string>
+    <!--ActionLogDialog-->
+    <!--ViewGuestActivity-->
+
+    <!--EditGuestActivity-->
+    <string name="editguest_seatrow">แถวที่นั่ง (เป็นตัวเลขหรืออักขระอังกฤษ)</string>
+    <string name="editguest_seatno">เลขที่นั่ง (เป็นตัวเลขเท่านั้น)</string>
+    <string name="editguest_guestname">*ชื่อและนามสกุล</string>
+    <string name="editguest_guestcorp">บริษัท / องกรค์</string>
+    <string name="editguest_guestposition">ตำแหน่ง</string>
+    <string name="editguest_award">*รางวัล</string>
+    <string name="editguest_awardno">*ลำดับเข้ารับรางวัล</string>
+    <string name="spnr_status">---สถานะ---</string>
+    <string name="editguest_alrt_finish_title">เรียนร้อย!</string>
+    <string name="editguest_alrt_finish_message"></string>
+    <!--EditGuestActivity-->
+
+    <!--EditGuestActivity-->
+    <string name="btn_submit">ยืนยัน</string>
+    <string name="btn_reset">ล้างแบบกรอกข้อมูล</string>
+    <!--EditGuestActivity-->
+    <!--InsertGuestActivity-->
+    <string name="insertguest_txt_statusspnr">สถานะ</string>
+    <string name="insertguest_alrt_empty_title">ลำดับเข้ารับรางวัลยังไม่ได้ระบุ</string>
+    <string name="insertguest_alrt_empty_message">ยังมีส่วนข้อมูลสำคัญ (ชื่อผู้เข้าร่วมงาน, รางวัลและลำดับรางวัล) ที่ไม่ได้ระบุ</string>
+    <!--InsertGuestActivity-->
+
+    <!--InsertEventActivity-->
+    <string name="insertevent_txt_titlehint">*ชื่ออีเวนต์</string>
+    <string name="insertevent_txt_deschint">รายละเอียด</string>
+    <!--InsertEventActivity-->
+
+    <!--ExtraUtils-->
+    <string name="extra_no_connection">กรุณาเปิด WIFI หรือเครือข่ายมือถือ</string> <!--ExtraUtils-->
+    <!--ExtraUtils-->
+
+    <!--CustomRow_Guest-->
+    <string name="row_guest_alrtstatus_title">เลือกสถานะปัจจุบัน</string>
+    <!--CustomRow_Guest-->
+    <!--Sorting_dialog-->
+    <string name="txt_sorting_sort_type">รูปแบบการเรียง</string>
+    <string name="txt_sorting_sort_type_desc">มาก -> น้อย</string>
+    <string name="txt_sorting_sort_type_asc">น้อย -> มาก</string>
+    <string name="txt_sorting_sort_by_awardno">ลำดับเข้ารับรางวัล</string>
+    <string name="txt_sorting_sort_by_award">รางวัล</string>
+    <string name="txt_sorting_sort_by_name">ชื่อ-นามสกุล</string>
+    <string name="txt_sorting_sort_by_corp">บริษัท / องกรค์</string>
+    <string name="txt_sorting_sort_by_position">ตำแหน่ง</string>
+    <string name="txt_sorting_sort_by_seatrow">แถวที่นั่ง</string>
+    <string name="txt_sorting_sort_by_seatno">เลขที่นั่ง</string>
+    <string name="txt_sorting_sort_by_seat">ที่นั่งของผู้เข้าร่วมงาน</string>
+    <string name="txt_sorting_sort_by_status">สถานะ</string>
+    <string name="txt_sorting_sort_by_guestno">ลำดับลงทะเบียน</string>
+    <string name="txt_sorting_sort_by">เรียงตาม...</string>
+
+    <!--<string name="txt_sorting_sort_typeby">Sorted By</string>-->
+    <!--Sorting_dialog-->
+
+    <!--Filter Dialog-->
+    <string name="txt_filter_by">Filtered By...</string>
+    <string name="txt_filter_by_awardno">ลำดับเข้ารับรางวัล</string>
+    <string name="txt_filter_by_award">รางวัล</string>
+    <string name="txt_filter_by_name">ชื่อ-นามสกุล</string>
+    <string name="txt_filter_by_corp">บริษัท / องกรค์</string>
+    <string name="txt_filter_by_position">ตำแหน่ง</string>
+    <string name="txt_filter_by_seatrow">แถวที่นั่ง</string>
+    <string name="txt_filter_by_seatno">เลขที่นั่ง</string>
+    <string name="txt_filter_by_seat">ที่นั่งของผู้เข้าร่วมงาน</string>
+    <string name="txt_filter_by_guestno">ลำดับการลงทะเบียน</string>
+    <string name="txt_filter_by_status">สถานะ</string>
+    <string name="txt_filter_by_all">แสดงทั้งหมด</string>
+    <!--Filter Dialog-->
+
+    <!---->
+    <string name="dismiss">ออก</string>
+    <string name="close">ปิด</string>
+    <string name="delete">ลบ</string>
+    <string name="submit">ยืนยัน</string>
+    <string name="acknowledge">รับทราบ</string>
+    <string name="goback">กลับ</string>
+    <string name="okay">ตกลง</string>
+    <string name="yes">ใช่</string>
+    <string name="no">ไม่</string>
+    <string name="progress">"กำลังดำเนินการ..."</string>
+    <string name="title_activity_test_nav">TestNavActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">ตั้งค่า</string>
+    <string name="areyousure">แน่ใจหรือไม่?</string>
+    <!---->
+    <array name="status">
+        <item>พร้อม</item>
+        <item>ไม่พร้อม</item>
+        <item>ไม่มา</item>
+        <item>รับรางวัลแล้ว</item>
+        <item>ออกจากงานแล้ว</item>
+    </array>
+    <array name="sorting_list">
+        <item>ลำดับเข้ารับรางวัล</item>
+        <item>รางวัล</item>
+        <item>ชื่อ-นามสกุล</item>
+        <item>บริษัท/องกรค์</item>
+        <item>ตำแหน่ง</item>
+        <item>แถวที่นั่ง</item>
+        <item>เลขที่นั่ง</item>
+    </array>
+    <!--OptionActivity-->
+    <string name="option_choose_th">ภาษาไทย</string>
+    <string name="option_choose_en">English</string>
+    <string name="option_lang_title">เลือกการแสดงภาษา</string>
+    <array name="option_lang_ary">
+        <item>English</item>
+        <item>ภาษาไทย</item>
+    </array>
+    <string name="option_pls_restart">การเปลี่ยนแปลงจะสมบูรณ์เมื่อแอปนี้ถูกเปิดใหม่อีกครั้ง.</string>
+    <!--OptionActivity-->
+
+</resources>
+
+
+
