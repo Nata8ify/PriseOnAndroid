@@ -13,6 +13,8 @@ public class User {
     private String name;
 
     public static String actName;
+    public static int thisUserId;
+
 
     public User() {
     }

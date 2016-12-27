@@ -143,15 +143,22 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
                                 if (ExtraUtils.isNetworkAvailable(context)) {
 
                                     // To convert position to conditionNo
-                                    int conditionNo = 0;
-                                    switch (which){
-                                        case 0 : conditionNo = 3; break;
-                                        case 1 : conditionNo = 4; break;
-                                        case 4 : conditionNo = 5; break;
+                                    int conditionNo = -1;
+                                    switch (which) {
+                                        case 0:
+                                            conditionNo = 3;
+                                            break;
+                                        case 1:
+                                            conditionNo = 4;
+                                            break;
+                                        case 4:
+                                            conditionNo = 5;
+                                            break;
                                     }
-
-                                new StatusUpdateAsyncTask().execute(which, GuestAdapter.this.getGuestArrayList(), position);
-                                    PriseEngine.saveLog(guest.getEventId(), guest.getUserId(), User.actName, guest.getGuestName(), conditionNo, context);
+                                    if (conditionNo != -1) {
+                                        new StatusUpdateAsyncTask().execute(which, GuestAdapter.this.getGuestArrayList(), position);
+                                        PriseEngine.saveLog(guest.getEventId(), guest.getUserId(), User.actName, guest.getGuestName(), conditionNo, guest.getGuestNo(), context);
+                                    }
                                 }
                             }
                         })

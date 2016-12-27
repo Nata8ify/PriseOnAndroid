@@ -89,6 +89,7 @@
     <string name="viewguest_dialog_logtype_50">Ready to Receive the Award.</string>
     <string name="viewguest_dialog_logtype_51">Unready to Receive the Award.</string>
     <string name="viewguest_dialog_logtype_54">Already Quited the event.</string>
+    <string name="viewguest_dialog_logtype_99"></string>
     <!--ActionLogDialog-->
     <!--ViewGuestActivity-->
 
@@ -160,6 +161,23 @@
     <string name="txt_filter_by_status">Status</string>
     <string name="txt_filter_by_all">Show All</string>
     <!--Filter Dialog-->
+
+    <!--LogActivity-->
+    <string name="txt_logact_11">Going to the Seat.</string>
+    <string name="txt_logact_12">Quiting the Event.</string>
+    <string name="txt_logact_13">Already at Seat.</string>
+    <string name="txt_logact_50">: Ready to Recieve an Award.</string>
+    <string name="txt_logact_51">: Unready to Recieve an Award now.</string>
+    <string name="txt_logact_54">: Quited from the Event.</string>
+    <string name="txt_toast_nodata">This Event Have no Logging Data for now.</string>
+    <string name="txt_toast_newlog">New Log added.</string>
+    <string name="btn_latestmsg">Latest</string>
+    <string name="btn_send_altermsg">Send</string>
+    <string name="btn_empty">Empty</string>
+    <string name="txt_nolog_now">NO LOGGING INFO NOW</string>
+    <string name="txt_logmsg_hint">Message Here...</string>
+    <string name="txt_logmsg_title">Log Message Builder</string>
+    <!--LogActivity-->
 
     <!---->
     <string name="dismiss">Dismiss</string>

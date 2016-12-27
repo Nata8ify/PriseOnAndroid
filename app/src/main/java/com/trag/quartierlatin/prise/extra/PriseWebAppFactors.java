@@ -5,6 +5,7 @@ package com.trag.quartierlatin.prise.extra;
  */
 public class PriseWebAppFactors {
     protected static final String HTTP_HOST = "http://52.77.248.225:8080/Prise";
+//    protected static final String HTTP_HOST = "http://localhost:8080//Prise";
     public static final String URL_APP_LOGIN = HTTP_HOST+"/Login?opt=app";
     public static final String URL_APP_REGISTER = HTTP_HOST+"/Seem?to=signUp";
     public static final String URL_GUEST_LIST_VIA_JSON = HTTP_HOST+"/AndroidView?opt=allguests";

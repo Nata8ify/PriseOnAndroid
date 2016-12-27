@@ -17,6 +17,7 @@ import com.trag.quartierlatin.prise.R;
 import java.lang.reflect.Type;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -473,7 +474,69 @@ public class PriseEngine {
         return "N/A";
     }
 
+    public static void saveLog(int eventId, int byUserId, String lByUserName, String guestName, int ConditionNo, int guestNo, Context context) {
+
+        Builders.Any.U ionBuilder = Ion.with(context)
+                .load(PriseWebAppFactors.URL_SAVE_LOG)
+                .setBodyParameter("userid", String.valueOf(byUserId))
+                .setBodyParameter("eventid", String.valueOf(eventId))
+                .setBodyParameter("user_actname", lByUserName)
+                .setBodyParameter("guestname", guestName);
+        try {
+            switch (ConditionNo) {
+                case 0:
+                    ionBuilder.setBodyParameter("logtype", String.valueOf(11))
+                            .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
+                            .get();
+                    editGuestStatus(2, guestNo, byUserId, eventId, context);
+                    break;
+                case 1:
+                    ionBuilder.setBodyParameter("logtype", String.valueOf(12))
+                            .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
+                            .get();
+                    editGuestStatus(2, guestNo, byUserId, eventId, context);
+                    break;
+                case 2:
+                    ionBuilder.setBodyParameter("logtype", String.valueOf(13))
+                            .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
+                            .get();
+                    editGuestStatus(2, guestNo, byUserId, eventId, context);
+                    break;
+                case 3:
+                    ionBuilder.setBodyParameter("logtype", String.valueOf(50))
+                            .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
+                            .get();
+                    break;
+                case 4:
+                    ionBuilder.setBodyParameter("logtype", String.valueOf(51))
+                            .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
+                            .get();
+                    break;
+                case 5:
+                    ionBuilder.setBodyParameter("logtype", String.valueOf(54))
+                            .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
+                            .get();
+                    break;
+                default:
+                    Log.v("saveLog", "Unexpected ConditionNo : " + ConditionNo);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        //[0]11 = Going to the seat with..
+        //[1]12 = Quiting from the event with..
+        //[2]13 = .. Already at seat.
+        //[3]50 = .. is Ready to Receive the Award.
+        //[4]51 = .. is Unready to Receive the Award.
+        //[-]52 = .. is Absent << May not use.
+        //[6]53 = .. is Already Received the Award << May not use.
+        //[5]54 = .. is Already Quited the event
+    }
+
     public static void saveLog(int eventId, int byUserId, String lByUserName, String guestName, int ConditionNo, Context context) {
+
         Builders.Any.U ionBuilder = Ion.with(context)
                 .load(PriseWebAppFactors.URL_SAVE_LOG)
                 .setBodyParameter("userid", String.valueOf(byUserId))
@@ -512,6 +575,11 @@ public class PriseEngine {
                             .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
                             .get();
                     break;
+                case 99:
+                    ionBuilder.setBodyParameter("logtype", String.valueOf(99))
+                            .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
+                            .get();
+                    break;
                 default:
                     Log.v("saveLog", "Unexpected ConditionNo : " + ConditionNo);
             }
@@ -546,18 +614,20 @@ public class PriseEngine {
     }
 
     public static ArrayList<EventLogging> getLog(int byUserId, int eventId, Context context) {
+        ArrayList<EventLogging> logList = null;
         try {
-            JsonObject log = Ion.with(context)
+            String log = Ion.with(context)
                     .load(PriseWebAppFactors.URL_GET_LOG)
                     .setBodyParameter("userid", String.valueOf(byUserId))
                     .setBodyParameter("eventid", String.valueOf(eventId))
-                    .asJsonObject()
+                    .asString()
                     .get();
-            Gson gson = new Gson();
-            Log.v("logloglog", gson.fromJson(log.get("log"), new TypeToken<ArrayList<EventLogging>>() {
-            }.getType()).toString());
-            return gson.fromJson(log.get("log"), new TypeToken<ArrayList<EventLogging>>() {
+            logList = new Gson().fromJson(log, new TypeToken<ArrayList<EventLogging>>() {
             }.getType());
+            if(logList != null) {
+//                Collections.reverse(logList);
+            }
+            return logList;
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {

@@ -26,6 +26,7 @@ import com.github.clans.fab.FloatingActionMenu;
 import com.trag.quartierlatin.prise.extra.ExtraUtils;
 import com.trag.quartierlatin.prise.extra.Guest;
 import com.trag.quartierlatin.prise.extra.GuestAdapter;
+import com.trag.quartierlatin.prise.extra.LogAdapter;
 import com.trag.quartierlatin.prise.extra.PriseEngine;
 import com.trag.quartierlatin.prise.extra.PriseFilter;
 import com.trag.quartierlatin.prise.extra.StatusAdapter;
@@ -81,8 +82,11 @@ public class ViewGuestActivity extends AppCompatActivity {
         context = ViewGuestActivity.this;
         txtEventName.setText(bundle.getString("eventName"));
         txtEventDescription.setText(bundle.getString("eventDescr"));
+
+        // Store Event ID and Event Owner ID.
         PriseEngine.userId = bundle.getInt("userId");
         PriseEngine.eventId = bundle.getInt("eventId");
+
         swrpvGuestList.cancelLongPress();
         swrpvGuestList.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -105,13 +109,10 @@ public class ViewGuestActivity extends AppCompatActivity {
                     linrayGroupGuestinfo.animate()
                             .translationY(-linrayGroupGuestinfo.getTop())
                             .setDuration(2000);
-
-                    Log.v("GONE", "YEP");
-
                 }
-                Log.v("LISENER", "YEP");
             }
         });
+
     }
 
     private Handler dataChangeHandler;
@@ -120,7 +121,6 @@ public class ViewGuestActivity extends AppCompatActivity {
 
     private void doGuestList() {
         if (ExtraUtils.isNetworkAvailable(ViewGuestActivity.this)) {
-//            Log.v("bundle", bundle.getInt("userId") + "::" + bundle.getInt("eventId"));
             guests = PriseEngine.getSortedGuestArrayList(this, bundle.getInt("userId"), bundle.getInt("eventId"), PriseEngine.sortById, PriseEngine.sortTypeId);
             guestArrayAdapter = new GuestAdapter(this, R.layout.guest_row, guests, bundle.getInt("userId"), bundle.getInt("eventId"));
             listwGuests.setAdapter(guestArrayAdapter);
@@ -187,11 +187,12 @@ public class ViewGuestActivity extends AppCompatActivity {
                     AlertDialog alrtLogAction = new AlertDialog.Builder(ViewGuestActivity.this)
                             .setItems(new CharSequence[]{
                                     getResources().getString(R.string.viewguest_dialog_logtype_11),
-                                    getResources().getString(R.string.viewguest_dialog_logtype_12),
                                     getResources().getString(R.string.viewguest_dialog_logtype_13),
-                                    getResources().getString(R.string.viewguest_dialog_logtype_50),
-                                    getResources().getString(R.string.viewguest_dialog_logtype_51),
-                                    getResources().getString(R.string.viewguest_dialog_logtype_54)}, new DialogInterface.OnClickListener() {
+                                    getResources().getString(R.string.viewguest_dialog_logtype_12)
+//                                    getResources().getString(R.string.viewguest_dialog_logtype_50),
+//                                    getResources().getString(R.string.viewguest_dialog_logtype_51),
+//                                    getResources().getString(R.string.viewguest_dialog_logtype_54)
+                            }, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     PriseEngine.saveLog(bundle.getInt("eventId"),
@@ -199,7 +200,9 @@ public class ViewGuestActivity extends AppCompatActivity {
                                             bundle.getString("thisUserName"),
                                             guests.get(finalPosition).getGuestName(),
                                             i,
+                                            guests.get(finalPosition).getGuestNo(),
                                             context);
+                                    update();
                                 }
                             })
                             .create();
@@ -212,7 +215,6 @@ public class ViewGuestActivity extends AppCompatActivity {
         dataChangeRunnable = new Runnable() {
             @Override
             public void run() {
-//                Log.v("isRunning", "YEP!");
                 if (!isDestroyed()) {
                     update();
                 }
@@ -290,7 +292,6 @@ public class ViewGuestActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.v("onResume", "YEP! onResume!");
         doGuestList();
     }
 
@@ -313,7 +314,7 @@ public class ViewGuestActivity extends AppCompatActivity {
                 insertGuestIntent.putExtra("userId", bundle.getInt("userId"));
                 insertGuestIntent.putExtra("eventId", bundle.getInt("eventId"));
                 startActivity(insertGuestIntent);
-                btnFabOperationRoot.close(false);
+                btnFabOperationRoot.close(true);
                 break;
             case R.id.btn_fab_sort:
 
@@ -362,6 +363,7 @@ public class ViewGuestActivity extends AppCompatActivity {
                         .create();
                 alrtSortOption.show();
                 this.guestArrayAdapter.notifyDataSetChanged();
+                btnFabOperationRoot.close(true);
                 break;
             case R.id.btn_fab_filter:
                 AlertDialog alrtFilter = new AlertDialog.Builder(ViewGuestActivity.this)
@@ -407,12 +409,16 @@ public class ViewGuestActivity extends AppCompatActivity {
                         })
                         .create();
                 alrtFilter.show();
+                btnFabOperationRoot.close(true);
                 break;
             case R.id.btn_fab_refresh:
                 update();
+                btnFabOperationRoot.close(true);
                 break;
             case R.id.btn_fab_log :
-
+                Intent logIntext = new Intent(ViewGuestActivity.this, LogActivity.class);
+                startActivity(logIntext);
+                btnFabOperationRoot.close(true);
                 break;
         }
     }
@@ -438,5 +444,6 @@ public class ViewGuestActivity extends AppCompatActivity {
             }
         }
     }
+
 
 }

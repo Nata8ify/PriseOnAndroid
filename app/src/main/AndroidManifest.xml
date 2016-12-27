@@ -41,7 +41,7 @@
         </receiver>
 
         <!-- <activity android:name=".extra.TestApplyActivity"></activity> -->
-        <activity android:name=".LogActivity"></activity>
+        <activity android:name=".LogActivity" />
     </application>
 
 </manifest>

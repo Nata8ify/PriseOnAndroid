@@ -38,8 +38,9 @@ public class WelcomeMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_menu);
         ButterKnife.bind(this);
-        ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(1l);
+        ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(10l);
         User.actName = getIntent().getExtras().getString("name");
+        User.thisUserId = getIntent().getExtras().getInt("userId");
         doOnCreate();
     }
 
