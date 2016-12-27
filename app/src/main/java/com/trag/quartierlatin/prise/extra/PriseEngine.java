@@ -491,13 +491,13 @@ public class PriseEngine {
                     editGuestStatus(2, guestNo, byUserId, eventId, context);
                     break;
                 case 1:
-                    ionBuilder.setBodyParameter("logtype", String.valueOf(12))
+                    ionBuilder.setBodyParameter("logtype", String.valueOf(13)) //swap 12
                             .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
                             .get();
-                    editGuestStatus(2, guestNo, byUserId, eventId, context);
+                    editGuestStatus(1, guestNo, byUserId, eventId, context);
                     break;
                 case 2:
-                    ionBuilder.setBodyParameter("logtype", String.valueOf(13))
+                    ionBuilder.setBodyParameter("logtype", String.valueOf(12)) //swap 13
                             .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
                             .get();
                     editGuestStatus(2, guestNo, byUserId, eventId, context);

@@ -94,6 +94,12 @@
     <string name="btn_latestmsg">ดูล่าสุด</string>
     <string name="btn_send_altermsg">สร้างข้อความ</string>
     <string name="btn_empty">ล้าง</string>
+    <string name="txt_logact_11">กำลังเดินทางไปที่นั่ง</string>
+    <string name="txt_logact_12">กำลังพาออกจากงาน</string>
+    <string name="txt_logact_13">ถึงที่นั่งเรียบร้อย</string>
+    <string name="txt_logact_50">: พร้อมเข้ารับรางวัล</string>
+    <string name="txt_logact_51">: ยังไม่สะดวกข้ารับรางวัล</string>
+    <string name="txt_logact_54">: เดินทางกลับบ้านเรียบร้อบแล้ว</string>
     <string name="txt_nolog_now">ยังไม่มีการเก็บ LOG ในขณะนี้</string>
     <string name="txt_logmsg_hint">ระบุข้อความที่นี่</string>
     <string name="txt_logmsg_title">สร้างข้อความ</string>
