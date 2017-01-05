@@ -48,6 +48,7 @@
     <string name="shre_event_alert_deltitle">ยกเลิกการใช้เหตุการณ์ร่วมกันกับ</string>
     <string name="shre_event_hint_addusr">ใส่ Username ของผู้ต้องการแบ่งปันเหตุการณ์นี้</string>
     <string name="shre_event_hint_space">พิมพ์ว้นวรรคเพื่อสำเร็จการแชร์ถึงบุคคลนั้น</string>
+    <string name="shre_event_toast_nooneshr">คุณยังไม่มีผู้ใช้อีเวนต์นี้ร่วมกัน</string>
     <!--sharing_dialog-->
     <!--ViewEventActivity-->
 
@@ -81,6 +82,8 @@
     <string name="viewguest_txt_title_event_details">รายละเอียดอีเวนต์</string>
     <string name="viewguest_txt_no_connection">ไม่สามารถเชื่อมต่อกับอินเตอร์เน็ต</string>
     <string name="viewguest_txt_got_connection">สามารถเชื่อมถึงอินเตอร์เน็ตได้แล้ว</string>
+    <string name="viewguest_toast_no_img_picked">ไม่มีการเลือกรูปภาพใดๆ</string>
+    <string name="viewguest_ichooser_choose_img">เลือกรูปภาพ</string>
     <!--ActionLogDialog-->
     <string name="viewguest_dialog_logtype_11">กำลังเดินทางไปที่นั่ง</string>
     <string name="viewguest_dialog_logtype_12">กำลังพาออกจากงาน</string>

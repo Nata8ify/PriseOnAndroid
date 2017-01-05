@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.koushikdutta.ion.Ion;
 import com.trag.quartierlatin.prise.R;
 
 import java.util.ArrayList;
@@ -111,6 +112,8 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
 //        statusSpinner.setAdapter(new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, context.getResources().getStringArray(R.array.status )));
 //        statusSpinner.setVisibility(View.GONE);
         final Guest guest = guestArrayList.get(position);
+
+
         txtSeatRow.setText(guest.getSeatRow().equals("") ? "-" : guest.getSeatRow());
         txtSeatNo.setText(guest.getSeatNo().equals("") ? "-" : guest.getSeatNo());
         txtAward.setText(context.getResources().getString(R.string.viewguest_award) + " " + guest.getAward() + "");
@@ -154,6 +157,9 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
                                         case 4:
                                             conditionNo = 5;
                                             break;
+                                        default:
+                                            new StatusUpdateAsyncTask().execute(which, GuestAdapter.this.getGuestArrayList(), position);
+                                            return;
                                     }
                                     if (conditionNo != -1) {
                                         new StatusUpdateAsyncTask().execute(which, GuestAdapter.this.getGuestArrayList(), position);
@@ -195,7 +201,7 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
         @Override
         protected void onPostExecute(Object o) {
             if (ExtraUtils.isNetworkAvailable(context)) {
-                if(PriseEngine.priseFilter == null) {
+                if (PriseEngine.priseFilter == null) {
                     GuestAdapter.this.guestArrayList.clear();
                     GuestAdapter.this.guestArrayList.addAll(PriseEngine.getSortedGuestArrayList(GuestAdapter.this.context, getAsUserId(), getAsEventId(), PriseEngine.sortById, PriseEngine.sortTypeId));
                     GuestAdapter.this.notifyDataSetChanged();

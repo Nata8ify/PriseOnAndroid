@@ -80,14 +80,17 @@ public class LogActivity extends AppCompatActivity {
 
         runnable = new Runnable() {
             @Override
-            public void run() {
+            public void run() { //<-- Bug Nullpointter
                 if (eventLoggings != null) {
                     eventLoggings.clear();
+                    try{
                     eventLoggings.addAll(PriseEngine.getLog(
                             PriseEngine.userId,
                             PriseEngine.eventId,
-                            LogActivity.this
-                    ));
+                            LogActivity.this));
+                    } catch (NullPointerException npex){
+                        Toast.makeText(LogActivity.this, npex.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                     logAdapter.notifyDataSetChanged();
                     if (LogActivity.this.logCount < LogActivity.this.eventLoggings.size()) {
                         LogActivity.this.logCount = LogActivity.this.eventLoggings.size();

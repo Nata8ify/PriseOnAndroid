@@ -13,7 +13,7 @@ public class Guest {
 
     private int guestNo;
     private String seatRow;
-    private String seatNo; // As String
+    private String seatNo;
     private int awardNo;
     private String award;
     private String guestName;
@@ -22,6 +22,15 @@ public class Guest {
     private int status;
     private int eventId;
     private int userId;
+    private String imgURI;
+
+    public String getImgURI() {
+        return imgURI;
+    }
+
+    public void setImgURI(String imgURI) {
+        this.imgURI = imgURI;
+    }
 
     public int getGuestNo() {
         return guestNo;
@@ -111,12 +120,25 @@ public class Guest {
         this.userId = userId;
     }
 
-    
+    public static String switchStatus(int status) {
+        switch (status) {
+            case 1:
+                return "Ready";
+            case 2:
+                return "Unready";
+            case 3:
+                return "Absent";
+            case 4:
+                return "Award Recieved";
+            case 5:
+                return "Quited";
+            default:
+                return null;
+        }
+    }
+
     @Override
     public String toString() {
         return "Guest{" + "guestNo=" + guestNo + ", seatRow=" + seatRow + ", seatNo=" + seatNo + ", awardNo=" + awardNo + ", award=" + award + ", guestName=" + guestName + ", corp=" + corp + ", position=" + position + ", status=" + status + ", eventId=" + eventId + ", userId=" + userId + '}';
     }
-
-    
-    
 }

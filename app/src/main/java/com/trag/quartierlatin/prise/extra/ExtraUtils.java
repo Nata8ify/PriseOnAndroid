@@ -4,16 +4,21 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.koushikdutta.ion.Ion;
 import com.trag.quartierlatin.prise.R;
 
 import java.util.List;
@@ -60,7 +65,7 @@ public class ExtraUtils {
                 , true);
     }
 
-    public static void showGuestInfo(Context context, List<Guest> guests, int position) {
+    public static void showGuestInfo(final Context context, List<Guest> guests, int position, ImageView guestImg) {
         final Dialog infoDialog = new Dialog(context);
         infoDialog.setContentView(R.layout.custom_guestinfo_view);
         ((TextView)infoDialog.findViewById(R.id.txt_name)).setText(guests.get(position).getGuestName());
@@ -84,7 +89,22 @@ public class ExtraUtils {
         ((TextView)infoDialog.findViewById(R.id.txt_seatrow)).setText(guests.get(position).getSeatRow());
 
         ((TextView)infoDialog.findViewById(R.id.txt_status)).setText(PriseEngine.switchStatus(guests.get(position).getStatus(), context));
+
         ((TextView)infoDialog.findViewById(R.id.txt_status)).setTextColor(colorSwitchStatus(guests.get(position).getStatus()));
+
+        guestImg = (ImageView) infoDialog.findViewById(R.id.img_guest);
+        String guestImgDir = PriseWebAppFactors.URL_GUESTPIC_DIR + guests.get(position).getImgURI();
+        Log.v("URL_GUESTPIC_DIR", (guests.get(position).getImgURI()==null?"no_img.jpg":guestImgDir));
+        Log.v("URL_GUESTPIC_DIR", guests.toString());
+        Log.v("URL_GUESTPIC_DIR", guestImgDir);
+        if(guests.get(position).getImgURI()==null){
+            guestImgDir = PriseWebAppFactors.URL_NO_GIMG;
+        }
+        Ion.with(context)
+                .load(guestImgDir)
+                .withBitmap()
+                .intoImageView(guestImg);
+
 
         ((LinearLayout)infoDialog.findViewById(R.id.linray_parentlinary)).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,7 +146,7 @@ public class ExtraUtils {
 //        alrtInfo.show();
     }
 
-    private static int colorSwitchStatus(int statusId){
+    public static int colorSwitchStatus(int statusId){
         switch (statusId){
             case 1 : return Color.rgb(0, 136, 0);
             case 2 : return Color.GRAY;

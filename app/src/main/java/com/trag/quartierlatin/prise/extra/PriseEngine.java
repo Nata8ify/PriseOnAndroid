@@ -10,6 +10,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
 import com.koushikdutta.ion.builder.Builders;
 import com.trag.quartierlatin.prise.R;
@@ -179,6 +180,8 @@ public class PriseEngine {
             guestArrayList = new ArrayList<Guest>();
             Guest guest;
             JsonArray guests = jsonObject.getAsJsonArray("guests");
+
+            Log.v("guestsguests: ", guests.toString());
             for (JsonElement jsonElement : guests) {
                 guest = new Guest();
                 guest.setGuestNo(jsonElement.getAsJsonObject().get("guestNo").getAsInt());
@@ -192,6 +195,9 @@ public class PriseEngine {
                 guest.setStatus(jsonElement.getAsJsonObject().get("status").getAsInt());
                 guest.setEventId(jsonElement.getAsJsonObject().get("eventId").getAsInt());
                 guest.setUserId(jsonElement.getAsJsonObject().get("userId").getAsInt());
+//                Log.v("imgURI",jsonElement.toString());
+                if (jsonElement.toString().contains("imgURI"))
+                    guest.setImgURI(jsonElement.getAsJsonObject().get("imgURI").getAsString());
 //            Log.v("guestName",guest.toString());
                 guestArrayList.add(guest);
             }
@@ -228,7 +234,7 @@ public class PriseEngine {
 
     public static void insertGuestInformation(String seatRow, String seatNo, String guestName, String corp, String position, String award, int awardNo, int status, int userId, int eventId, Context context) {
         try {
-            String callBack = Ion.with(context)
+            String callBack = Ion.with(context) // <-- Change to Multipart Request
                     .load(PriseWebAppFactors.URL_INSERT_GUEST)
                     .setBodyParameter(PriseWebAppFactors.PARAM_GUEST_SEAT_ROW, seatRow)
                     .setBodyParameter(PriseWebAppFactors.PARAM_GUEST_SEAT_NO, String.valueOf(seatNo))
@@ -624,7 +630,7 @@ public class PriseEngine {
                     .get();
             logList = new Gson().fromJson(log, new TypeToken<ArrayList<EventLogging>>() {
             }.getType());
-            if(logList != null) {
+            if (logList != null) {
 //                Collections.reverse(logList);
             }
             return logList;

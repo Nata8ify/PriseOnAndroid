@@ -8,8 +8,8 @@
         android:id="@+id/txtw_shr_event_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/shre_event_title"
         android:padding="10dp"
+        android:text="@string/shre_event_title"
         android:textSize="18dp"
         android:textStyle="bold" />
 
@@ -57,28 +57,37 @@
             android:layout_width="match_parent"
             android:layout_height="140dp"></ListView>
 
-        <EditText
-            android:id="@+id/edtxt_insert_shr_user"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="@string/shre_event_hint_addusr"
-            android:inputType="textPersonName"/>
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btn_submit_shr_user"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/submit" />
+            <EditText
+                android:id="@+id/edtxt_insert_shr_user"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/shre_event_hint_addusr"
+                android:inputType="textPersonName" />
+        </android.support.design.widget.TextInputLayout>
 
-        <Button
-            android:id="@+id/btn_close_shr_event"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/close" />
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn_submit_shr_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/submit" />
+
+    <Button
+        android:id="@+id/btn_close_shr_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/close" />
+</LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

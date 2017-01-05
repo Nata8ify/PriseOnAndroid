@@ -25,6 +25,7 @@ public class PriseWebAppFactors {
     public static final String URL_SAVE_LOG = HTTP_HOST+"/AndroidView?opt=savelog_action";
     public static final String URL_GET_LOG = HTTP_HOST+"/AndroidView?opt=getlog_action";
     public static final String URL_EMPTY_LOG = HTTP_HOST+"/AndroidView?opt=emptylog";
+    public static final String URL_UPLOAD_IMG = HTTP_HOST+"/GuestEditorwithIMG";
 
 //    http://52.221.255.26:8080/Prise/AndroidView?opt=allguests&filterno=1&filterargs=1&sortby=1&sorttype=asc&userid=2&eventid=1
     public static final String PARAM_USER_ID = "userid";
@@ -43,9 +44,15 @@ public class PriseWebAppFactors {
     public static final String PARAM_GUEST_FILTER_ARGUMENT = "filterargs";;
     public static final String PARAM_GUEST_SORT_BY_ID = "sortby";
     public static final String PARAM_GUEST_SORT_TYPE_ID = "sorttype";
+    public static final String PARAM_GUEST_MULTIPART_IMG_PNAME = "pimg";
+    public static final String PARAM_GUEST_MULTIPART_IMG_NAME = "img";
 
     public static final String PARAM_EVENT_TITLE = "title";
     public static final String PARAM_EVENT_DESC = "desc";
+
+    public static final String URL_GUESTPIC_DIR = HTTP_HOST+"/guestpics/";
+    public static final String URL_NO_GIMG = HTTP_HOST+"/guestpics/no_img.jpg";
+
 
     public static final String CHARSET_UTF8 = "UTF-8";
 

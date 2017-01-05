@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.koushikdutta.ion.Ion;
 import com.trag.quartierlatin.prise.R;
@@ -44,6 +45,7 @@ public class EventAdapter extends ArrayAdapter<Event> {
     private ListView sharedUsersList;
     private ArrayAdapter<String> usernameSharedList;
     private ArrayList<String> userList;
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
@@ -85,13 +87,17 @@ public class EventAdapter extends ArrayAdapter<Event> {
 
                 sharedUsersList = (ListView) sharingDialog.findViewById(R.id.listw_shr_users);
                 userList = PriseEngine.getSharedEventUsersList(eventId, byUserId, context);
-                usernameSharedList = new ArrayAdapter<String>(context
-                        , android.R.layout.simple_list_item_1
-                        , userList);
-                sharedUsersList.setAdapter(usernameSharedList);
-
+//                Toast.makeText(context, userList.toString(), Toast.LENGTH_LONG).show();
+                if (!userList.isEmpty()) {
+                    usernameSharedList = new ArrayAdapter<String>(context
+                            , android.R.layout.simple_list_item_1
+                            , userList);
+                    sharedUsersList.setAdapter(usernameSharedList);
+                } else {
+                    Toast.makeText(context, context.getResources().getString(R.string.shre_event_toast_nooneshr), Toast.LENGTH_LONG).show();
+                }
                 sharedUsersList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//
+                    //
                     @Override
                     public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
                         final int userPosition = position;
@@ -100,18 +106,18 @@ public class EventAdapter extends ArrayAdapter<Event> {
                                 .setNegativeButton(context.getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
-                                        Log.v("userList.get(i)",userPosition+"");
+                                        Log.v("userList.get(i)", userPosition + "");
                                     }
                                 })
                                 .setPositiveButton(context.getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
 
-                                        if(PriseEngine.deleteUserThisEvent(eventId, byUserId, String.valueOf(sharedUsersList.getItemAtPosition(userPosition)), context)) {
-                                            Log.v("getItemAtPosition",String.valueOf(sharedUsersList.getItemAtPosition(userPosition)));
+                                        if (PriseEngine.deleteUserThisEvent(eventId, byUserId, String.valueOf(sharedUsersList.getItemAtPosition(userPosition)), context)) {
+                                            Log.v("getItemAtPosition", String.valueOf(sharedUsersList.getItemAtPosition(userPosition)));
                                             doSharingNotifySetChanged(sharedUsersList, usernameSharedList, context, eventId, byUserId);
                                         } else {
-                                            Log.v("getItemAtPosition",String.valueOf(sharedUsersList.getItemAtPosition(userPosition)));
+                                            Log.v("getItemAtPosition", String.valueOf(sharedUsersList.getItemAtPosition(userPosition)));
                                         }
                                     }
                                 })
@@ -154,7 +160,7 @@ public class EventAdapter extends ArrayAdapter<Event> {
         return row;
     }
 
-    public static void doSharingNotifySetChanged(ListView sharedUsersList, ArrayAdapter<String> usernameSharedList, Context context, int eventId, int byUserId){
+    public static void doSharingNotifySetChanged(ListView sharedUsersList, ArrayAdapter<String> usernameSharedList, Context context, int eventId, int byUserId) {
         usernameSharedList = new ArrayAdapter<String>(context
                 , android.R.layout.simple_list_item_1
                 , PriseEngine.getSharedEventUsersList(eventId, byUserId, context));

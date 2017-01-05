@@ -49,6 +49,7 @@
     <string name="shre_event_alert_deltitle">Cancel Sharing with </string>
     <string name="shre_event_hint_addusr">Share this Event To... </string>
     <string name="shre_event_hint_space">Type *SPACE* to Completing the username.</string>
+    <string name="shre_event_toast_nooneshr">You have Sharing to no One..</string>
     <!--sharing_dialog-->
     <!--ViewEventActivity-->
 
@@ -82,6 +83,9 @@
     <string name="viewguest_txt_title_event_details">Event Details</string>
     <string name="viewguest_txt_no_connection">No Internet Connection Found.</string>
     <string name="viewguest_txt_got_connection">Internet Connection is Established Now.</string>
+    <string name="viewguest_toast_no_img_picked">No Image Picked.</string>
+    <string name="viewguest_ichooser_choose_img">Choose Image</string>
+
     <!--ActionLogDialog-->
     <string name="viewguest_dialog_logtype_11">Going to the seat.</string>
     <string name="viewguest_dialog_logtype_12">Quiting from the event.</string>
