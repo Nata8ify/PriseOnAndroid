@@ -144,7 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Prise 1.41 beta  (Latest Update 31 Dec. 2015) "
+            android:text="Prise 1.42 beta  (Latest Update 7 Jan. 2017) "
             android:textColor="#fff" />
 
     </LinearLayout>

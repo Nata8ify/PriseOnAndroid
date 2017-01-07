@@ -130,6 +130,8 @@
     <string name="insertguest_txt_statusspnr">สถานะ</string>
     <string name="insertguest_alrt_empty_title">ลำดับเข้ารับรางวัลยังไม่ได้ระบุ</string>
     <string name="insertguest_alrt_empty_message">ยังมีส่วนข้อมูลสำคัญ (ชื่อผู้เข้าร่วมงาน, รางวัลและลำดับรางวัล) ที่ไม่ได้ระบุ</string>
+    <string name="insertguest_toast_added">ถูกเพิ่มเข้าสู่อีเวนต์แล้วแล้ว</string>
+    <string name="insertguest_toast_notadd">ไม่สามารถเพิ่มข้อมูลเข้าสู่ระบบได้ [ข้อมูลบางส่วนของผู้เข้าร่วมงานซ้ำกัน]</string>
     <!--InsertGuestActivity-->
 
     <!--InsertEventActivity-->

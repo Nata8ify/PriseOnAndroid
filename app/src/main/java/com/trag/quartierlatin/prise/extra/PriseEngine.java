@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -14,6 +15,7 @@ import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
 import com.koushikdutta.ion.builder.Builders;
 import com.trag.quartierlatin.prise.R;
+import com.trag.quartierlatin.prise.ViewGuestActivity;
 
 import java.lang.reflect.Type;
 import java.nio.charset.Charset;
@@ -249,6 +251,41 @@ public class PriseEngine {
                     .asString()
                     .get();
 //            Log.v("callBack",callBack+"");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertGuestInformationForMultipart(String seatRow, String seatNo, String guestName, String corp, String position, String award, int awardNo, int status, int userId, int eventId, Context context) {
+        try {
+            String callBack = Ion.with(context) // <-- Change to Multipart Request
+                    .load(PriseWebAppFactors.URL_INSERT_GUEST)
+                    .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_SEAT_ROW, seatRow)
+                    .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_SEAT_NO, String.valueOf(seatNo))
+                    .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_NAME, guestName)
+                    .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_CORP, corp)
+                    .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_POSITION, position)
+                    .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_AWARD, award)
+                    .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_AWARWD_NUMBER, String.valueOf(awardNo))
+                    .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_STATUS_INSERT, String.valueOf(status))
+                    .setMultipartParameter(PriseWebAppFactors.PARAM_USER_ID, String.valueOf(userId))
+                    .setMultipartParameter(PriseWebAppFactors.PARAM_EVENT_ID, String.valueOf(eventId))
+                    .asString()
+                    .get();
+            Log.v("callBack",callBack+"");
+            if(callBack.contains("container-fluid")){
+//                Toast.makeText(context,
+//                        context.getResources().getString(R.string.insertguest_toast_added),
+//                        Toast.LENGTH_SHORT).show();
+                Log.v("insertS","success");
+            } else {
+//                Toast.makeText(context,
+//                        context.getResources().getString(R.string.insertguest_toast_notadd),
+//                        Toast.LENGTH_SHORT).show();
+                Log.v("insertS","fail");
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {

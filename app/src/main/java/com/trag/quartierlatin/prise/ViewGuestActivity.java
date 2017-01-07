@@ -3,11 +3,13 @@ package com.trag.quartierlatin.prise;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -42,8 +44,10 @@ import com.trag.quartierlatin.prise.extra.PriseWebAppFactors;
 import com.trag.quartierlatin.prise.extra.StatusAdapter;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -466,6 +470,13 @@ public class ViewGuestActivity extends AppCompatActivity implements View.OnClick
     private int tempPosition;
     private String tempGuestImgDir;
     private ImageView tempGuestImg;
+
+    private Intent getIntent;
+    private Intent intentPicker;
+    private Intent intentTakeImage;
+    private Intent intentChooser;
+
+
     public void showGuestInfo(final Context context, final List<Guest> guests, final int position) {
         final Dialog infoDialog = new Dialog(context);
         infoDialog.setContentView(R.layout.custom_guestinfo_view);
@@ -509,11 +520,39 @@ public class ViewGuestActivity extends AppCompatActivity implements View.OnClick
         this.tempGuestImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent pickIntent = new Intent(Intent.ACTION_GET_CONTENT);
-                pickIntent.setType("image/*");
-                pickIntent.setAction(Intent.ACTION_PICK);
                 tempPosition = position;
-                startActivityForResult(Intent.createChooser(pickIntent, "Choose Image"), PriseAppFactors.CHOOSE_IMAGE_REQ_CODE);
+
+                getIntent = new Intent(Intent.ACTION_GET_CONTENT);
+                getIntent.setType("image/*");
+                intentPicker = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                intentPicker.setType("image/*");
+                intentChooser = Intent.createChooser(getIntent, "Choose Image");
+                intentChooser.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[]{intentPicker});
+
+                guestImgFile = new File(getExternalFilesDir("/")
+                        , ("Ion_" + (new Random().nextInt(999) + 111) + ".jpg"));
+                intentTakeImage = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                intentTakeImage.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(guestImgFile));
+
+
+                AlertDialog chooseDialog = new AlertDialog.Builder(context)
+                        .setItems(new CharSequence[]{"Pick Image from Gallery", "Take a New One"}, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                switch (i) {
+                                    case 0:
+                                        startActivityForResult(intentChooser, PriseAppFactors.CHOOSE_IMAGE_REQ_CODE);
+                                        break;
+                                    case 1:
+                                        if (intentTakeImage.resolveActivity(getPackageManager()) != null) {
+                                            startActivityForResult(intentTakeImage, PriseAppFactors.TAKE_PHOTO_REQ_CODE);
+                                        }
+                                        break;
+                                }
+                            }
+                        })
+                        .create();
+                chooseDialog.show();
 
             }
         });
@@ -537,60 +576,75 @@ public class ViewGuestActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (requestCode) {
-            case 1:
-                File guestImgFile = null;
-                Bitmap guestImgBitmap = null;
-                FileOutputStream fos = null;
-                try {
-                    guestImgFile = new File(this.getExternalFilesDir("/")
-                            , ("Ion_" + (new Random().nextInt(999) + 111) + ".jpg"));
-//                    if(guestImgBitmap.getWidth() > guestImgBitmap.getHeight()){
-//                        Matrix guestImgMatrix = new Matrix();
-//                        guestImgMatrix.postRotate(90);
-//                        guestImgBitmap = Bitmap.createBitmap(guestImgBitmap, 0, 0,
-//                                guestImgBitmap.getWidth(), guestImgBitmap.getHeight(),
-//                                guestImgMatrix,
-//                                false);
-//                    }
+        Bitmap guestImgBitmap = null;
+        FileOutputStream fos = null;
+        if (resultCode == RESULT_OK) {
+            switch (requestCode) {
+                case PriseAppFactors.TAKE_PHOTO_REQ_CODE:
+                    Log.v("guestImgFile: ", guestImgFile.getAbsolutePath());
+                    try {
+                        guestImgBitmap = MediaStore.Images.Media.getBitmap(ViewGuestActivity.this.getContentResolver(),
+                                Uri.fromFile(guestImgFile));
+                    } catch (IOException e) { // Catch for cause of guestImgFile.
+                        e.printStackTrace();
+                    }
+                    break;
+                case PriseAppFactors.CHOOSE_IMAGE_REQ_CODE:
+                    try {
                         guestImgBitmap = MediaStore.Images.Media.getBitmap(ViewGuestActivity.this.getContentResolver(),
                                 data.getData()); //<-- Bug Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'android.net.Uri android.content.Intent.getData()' on a null object reference
-
-                        fos = new FileOutputStream(guestImgFile);
-                    guestImgBitmap.compress(Bitmap.CompressFormat.JPEG, 10, fos);
-                    fos.close();
-                    this.guestImgFile = guestImgFile;
-                    Ion.with(context)
-                            .load(PriseWebAppFactors.URL_UPLOAD_IMG)
-                            .setMultipartFile(PriseWebAppFactors.PARAM_GUEST_MULTIPART_IMG_NAME, guestImgFile)
-                            .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_MULTIPART_IMG_PNAME, guests.get(tempPosition).getImgURI())
-                            .setMultipartParameter(PriseWebAppFactors.PARAM_USER_ID, String.valueOf(PriseEngine.userId))
-                            .setMultipartParameter(PriseWebAppFactors.PARAM_EVENT_ID, String.valueOf(guests.get(tempPosition).getEventId()))
-                            .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_NUMBER, String.valueOf(guests.get(tempPosition).getGuestNo()))
-                    .asString()
-                    .setCallback(new FutureCallback<String>() {
-                        @Override
-                        public void onCompleted(Exception e, String result) {
-                            if(e != null){
-                                Log.v("result", result);
-                            } else {
-                                Log.v("DONE", result);
-                                tempGuestImgDir = PriseWebAppFactors.URL_GUESTPIC_DIR+result;
-                                Ion.with(context)
-                                        .load(tempGuestImgDir)
-                                        .withBitmap()
-                                        .intoImageView(tempGuestImg);
+// Catch for cause of data.getData().
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+            }
+            try {
+                Log.v("guestImgFile: ", guestImgFile.getAbsolutePath());
+                fos = new FileOutputStream(guestImgFile);
+                guestImgBitmap.compress(Bitmap.CompressFormat.JPEG, 10, fos);
+                fos.close();
+                Ion.with(context)
+                        .load(PriseWebAppFactors.URL_UPLOAD_IMG)
+                        .setMultipartFile(PriseWebAppFactors.PARAM_GUEST_MULTIPART_IMG_NAME, guestImgFile)
+                        .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_MULTIPART_IMG_PNAME, guests.get(tempPosition).getImgURI())
+                        .setMultipartParameter(PriseWebAppFactors.PARAM_USER_ID, String.valueOf(PriseEngine.userId))
+                        .setMultipartParameter(PriseWebAppFactors.PARAM_EVENT_ID, String.valueOf(guests.get(tempPosition).getEventId()))
+                        .setMultipartParameter(PriseWebAppFactors.PARAM_GUEST_NUMBER, String.valueOf(guests.get(tempPosition).getGuestNo()))
+                        .asString()
+                        .setCallback(new FutureCallback<String>() {
+                            @Override
+                            public void onCompleted(Exception e, final String result) {
+                                if (e != null) {
+                                    Log.v("result", result);
+                                } else {
+                                    tempGuestImgDir = PriseWebAppFactors.URL_GUESTPIC_DIR + result; //<-- result return nothing.
+                                    new Thread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            Log.v("tempGuestImgDir.!trim()", tempGuestImgDir.length() + "");
+                                            Log.v("tempGuestImgDir.trim()", tempGuestImgDir.trim().length() + "");
+                                            Log.v("tempGuestImgDir.trim()", tempGuestImgDir.replace("\n", ""));
+                                            Ion.with(context)
+                                                    .load(tempGuestImgDir.replace("\n", ""))
+                                                    .withBitmap()
+                                                    .placeholder(R.drawable.no_img)
+                                                    .intoImageView(tempGuestImg);
+                                        }
+                                    }).run();
+                                }
                             }
-                        }
-                    });
-                    update();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch(NullPointerException npex){
-                    Toast.makeText(ViewGuestActivity.this, getResources().getString(R.string.viewguest_toast_no_img_picked), Toast.LENGTH_SHORT).show();
+                        });
 
-                }
-                break;
+            } catch (NullPointerException npex) {
+                Toast.makeText(ViewGuestActivity.this, getResources().getString(R.string.viewguest_toast_no_img_picked), Toast.LENGTH_SHORT).show();
+                npex.printStackTrace();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 }

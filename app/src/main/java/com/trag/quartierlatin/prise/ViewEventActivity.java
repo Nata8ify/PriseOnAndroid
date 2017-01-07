@@ -161,7 +161,6 @@ public class ViewEventActivity extends AppCompatActivity {
                 public void run() {
                     if (!ViewEventActivity.this.isDestroyed()) {
                         doEventList(getIntent().getExtras().getInt("userId"));
-                        Log.v("refreshRunnable", "YEP!");
                     } else {
                         refreshHandler.removeCallbacks(refreshRunnable);
                     }

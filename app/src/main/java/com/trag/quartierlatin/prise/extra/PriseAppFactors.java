@@ -5,6 +5,6 @@ package com.trag.quartierlatin.prise.extra;
  */
 
 public class PriseAppFactors {
-    public static final int CHOOSE_IMAGE_REQ_CODE = 1;
-    public static final int TAKE_PHOTO_REQ_CODE = 2;
+    public static final int TAKE_PHOTO_REQ_CODE = 1;
+    public static final int CHOOSE_IMAGE_REQ_CODE = 2;
 }

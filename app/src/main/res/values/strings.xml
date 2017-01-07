@@ -118,6 +118,8 @@
     <string name="insertguest_txt_statusspnr">Status</string>
     <string name="insertguest_alrt_empty_title">Award Number is Empty</string>
     <string name="insertguest_alrt_empty_message">Some necessary information such as Guest Name, Award, AwardNo must be filled</string>
+    <string name="insertguest_toast_added">has been added.</string>
+    <string name="insertguest_toast_notadd">Cannot add an information to the System cause of the information may be duplicated.</string>
     <!--InsertGuestActivity-->
 
     <!--InsertEventActivity-->
@@ -136,7 +138,7 @@
     <string name="txt_sorting_sort_type">Sort Types</string>
     <string name="txt_sorting_sort_type_desc">Descending</string>
     <string name="txt_sorting_sort_type_asc">Ascending</string>
-    <string name="txt_sorting_sort_by_awardno">Award Number</string>
+    <string name="txt_sorting_sort_by_awardno">Award Ordering</string>
     <string name="txt_sorting_sort_by_award">Award</string>
     <string name="txt_sorting_sort_by_name">Name</string>
     <string name="txt_sorting_sort_by_corp">Corporation</string>
@@ -153,7 +155,7 @@
 
     <!--Filter Dialog-->
     <string name="txt_filter_by">Filtered By...</string>
-    <string name="txt_filter_by_awardno">Award Number</string>
+    <string name="txt_filter_by_awardno">Award Ordering</string>
     <string name="txt_filter_by_award">Award</string>
     <string name="txt_filter_by_name">Name</string>
     <string name="txt_filter_by_corp">Corporation</string>
@@ -210,7 +212,7 @@
         <item>Quited</item>
     </array>
     <array name="sorting_list">
-        <item>Award Number</item>
+        <item>Award Ordering</item>
         <item>Award</item>
         <item>Name</item>
         <item>Corp</item>

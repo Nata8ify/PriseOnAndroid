@@ -141,7 +141,7 @@ public class InsertGuestActivity extends AppCompatActivity {
         protected Void doInBackground(String... params) {
 
                 // AwradNo can't be ""
-                PriseEngine.insertGuestInformation(params[0]
+                PriseEngine.insertGuestInformationForMultipart(params[0]
                         , params[1]
                         , params[2]
                         , params[3]
