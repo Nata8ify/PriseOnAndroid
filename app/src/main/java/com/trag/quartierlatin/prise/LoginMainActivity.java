@@ -29,7 +29,7 @@ import java.util.concurrent.ExecutionException;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import xyz.hanks.library.SmallBang;
+//import xyz.hanks.library.SmallBang;
 
 public class LoginMainActivity extends AppCompatActivity {
 
@@ -55,7 +55,7 @@ public class LoginMainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         doInitialOnCreate();
         doListenerOnCreate();
-        doAnimationOnCreate();
+//        doAnimationOnCreate();
     }
 
     private void doInitialOnCreate() {
@@ -94,12 +94,12 @@ public class LoginMainActivity extends AppCompatActivity {
         });
     }
 
-    private SmallBang smallBang;
-
-    private void doAnimationOnCreate() {
-        smallBang = new SmallBang(this);
-        smallBang.bang(imgUser);
-    }
+//    private SmallBang smallBang;
+//
+//    private void doAnimationOnCreate() {
+//        smallBang = new SmallBang(this);
+//        smallBang.bang(imgUser);
+//    }
 
 
     @OnClick(R.id.btn_login)

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PriseOnAndroid.iml" filepath="$PROJECT_DIR$/PriseOnAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prise_OnAndroid.iml" filepath="$PROJECT_DIR$/Prise_OnAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

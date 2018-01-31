@@ -98,32 +98,6 @@ public class ExtraUtils {
         }
         infoDialog.show();
 
-//        AlertDialog alrtInfo = new AlertDialog.Builder(context)
-//                .setMessage(
-//                        "\n" + context.getResources().getString(R.string.viewguest_info_seatrow)
-//                                + " " + guests.get(position).getSeatRow() + "\n" +
-//                                "\n" + context.getResources().getString(R.string.viewguest_info_seatno)
-//                                + " " + guests.get(position).getSeatNo() + "\n" +
-//                                "\n" + context.getResources().getString(R.string.viewguest_info_guestname)+"\n"
-//                                + "" + guests.get(position).getGuestName() + "\n" +
-//                                "\n" + context.getResources().getString(R.string.viewguest_info_corp)+"\n"
-//                                + "" + guests.get(position).getCorp() + "\n" +
-//                                "\n" + context.getResources().getString(R.string.viewguest_info_position)+"\n"
-//                                + "" + guests.get(position).getPosition() + "\n" +
-//                                "\n" + context.getResources().getString(R.string.viewguest_info_award)
-//                                + " " + guests.get(position).getAward() + "\n" +
-//                                "\n" + context.getResources().getString(R.string.viewguest_info_awardno)
-//                                + " " + guests.get(position).getAwardNo() + "\n" +
-//                                "\n" + context.getResources().getString(R.string.viewguest_info_status)
-//                                + " " + PriseEngine.switchStatus(guests.get(position).getStatus(), context) + "\n")
-//                .setPositiveButton(context.getResources().getString(R.string.dismiss), new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//
-//                    }
-//                })
-//                .create();
-//        alrtInfo.show();
     }
 
     private static int colorSwitchStatus(int statusId){
