@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.support.v7.app.AlertDialog;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -61,42 +62,47 @@ public class ExtraUtils {
     }
 
     public static void showGuestInfo(Context context, List<Guest> guests, int position) {
-        final Dialog infoDialog = new Dialog(context);
-        infoDialog.setContentView(R.layout.custom_guestinfo_view);
-        ((TextView)infoDialog.findViewById(R.id.txt_name)).setText(guests.get(position).getGuestName());
+//        final Dialog infoDialog = new Dialog(context);
+//        infoDialog.setContentView(R.layout.custom_guestinfo_view);
+
+        final AlertDialog.Builder infoDialogBuilder = new AlertDialog.Builder(context);
+        View infoView = (LayoutInflater.from(context).inflate(R.layout.custom_guestinfo_view, null));
+        infoDialogBuilder.setView(infoView);
+
+        ((TextView)infoView.findViewById(R.id.txt_name)).setText(guests.get(position).getGuestName());
 
         if(!guests.get(position).getCorp().equals(""))
-            ((TextView)infoDialog.findViewById(R.id.txt_corp)).setText(guests.get(position).getCorp());
+            ((TextView)infoView.findViewById(R.id.txt_corp)).setText(guests.get(position).getCorp());
         else
-            ((TextView)infoDialog.findViewById(R.id.txt_corp)).setText("-");
+            ((TextView)infoView.findViewById(R.id.txt_corp)).setText("-");
 
         if(!guests.get(position).getPosition().equals(""))
-            ((TextView)infoDialog.findViewById(R.id.txt_position)).setText(guests.get(position).getPosition());
+            ((TextView)infoView.findViewById(R.id.txt_position)).setText(guests.get(position).getPosition());
         else
-            ((TextView)infoDialog.findViewById(R.id.txt_position)).setText("-");
+            ((TextView)infoView.findViewById(R.id.txt_position)).setText("-");
 
-        ((TextView)infoDialog.findViewById(R.id.txt_award)).setText(guests.get(position).getAward());
+        ((TextView)infoView.findViewById(R.id.txt_award)).setText(guests.get(position).getAward());
 
-        ((TextView)infoDialog.findViewById(R.id.txt_awardno)).setText(String.valueOf(guests.get(position).getAwardNo()));
+        ((TextView)infoView.findViewById(R.id.txt_awardno)).setText(String.valueOf(guests.get(position).getAwardNo()));
 
-        ((TextView)infoDialog.findViewById(R.id.txt_seatno)).setText(String.valueOf(guests.get(position).getSeatNo()));
+        ((TextView)infoView.findViewById(R.id.txt_seatno)).setText(String.valueOf(guests.get(position).getSeatNo()));
 
-        ((TextView)infoDialog.findViewById(R.id.txt_seatrow)).setText(guests.get(position).getSeatRow());
+        ((TextView)infoView.findViewById(R.id.txt_seatrow)).setText(guests.get(position).getSeatRow());
 
-        ((TextView)infoDialog.findViewById(R.id.txt_status)).setText(PriseEngine.switchStatus(guests.get(position).getStatus(), context));
-        ((TextView)infoDialog.findViewById(R.id.txt_status)).setTextColor(colorSwitchStatus(guests.get(position).getStatus()));
-
-        ((LinearLayout)infoDialog.findViewById(R.id.linray_parentlinary)).setOnClickListener(new View.OnClickListener() {
+        ((TextView)infoView.findViewById(R.id.txt_status)).setText(PriseEngine.switchStatus(guests.get(position).getStatus(), context));
+        ((TextView)infoView.findViewById(R.id.txt_status)).setTextColor(colorSwitchStatus(guests.get(position).getStatus()));
+        final AlertDialog infoAlrt = infoDialogBuilder.create();
+        ((LinearLayout)infoView.findViewById(R.id.linray_parentlinary)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                infoDialog.dismiss();
+                infoAlrt.dismiss();
             }
         });
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            infoDialog.create();
+            infoDialogBuilder.create();
         }
-        infoDialog.show();
+        infoAlrt.show();
 
     }
 
