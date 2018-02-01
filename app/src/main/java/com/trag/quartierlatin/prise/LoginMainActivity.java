@@ -152,7 +152,7 @@ public class LoginMainActivity extends AppCompatActivity {
                         , userJSON.get("email").getAsString()
                         , userJSON.get("name").getAsString());
                 if (user != null) { // Do keep user info here.
-                    Intent intent = new Intent(LoginMainActivity.this, WelcomeMenuActivity.class);
+                    Intent intent = new Intent(LoginMainActivity.this, ViewEventActivity.class);
                     intent.putExtra("userId", user.getUserId());
                     intent.putExtra("username", user.getUsername());
                     intent.putExtra("password", user.getPassword());
