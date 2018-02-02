@@ -154,6 +154,8 @@
             fab:fab_colorNormal="@color/btn_primary"
             fab:fab_colorPressed="@color/btn_primary_pressed"
             fab:fab_label="@string/viewguest_fab_menu_log"
-            fab:fab_size="mini" />
+            fab:fab_size="mini"
+
+            android:visibility="gone"/>
     </com.github.clans.fab.FloatingActionMenu>
 </RelativeLayout>

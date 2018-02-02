@@ -415,11 +415,11 @@ public class ViewGuestActivity extends AppCompatActivity {
                 update();
                 btnFabOperationRoot.close(true);
                 break;
-            case R.id.btn_fab_log :
+           /* case R.id.btn_fab_log :
                 Intent logIntext = new Intent(ViewGuestActivity.this, LogActivity.class);
                 startActivity(logIntext);
                 btnFabOperationRoot.close(true);
-                break;
+                break;*/
         }
     }
 

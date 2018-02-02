@@ -474,8 +474,8 @@ public class PriseEngine {
         return "N/A";
     }
 
-    public static void saveLog(int eventId, int byUserId, String lByUserName, String guestName, int ConditionNo, int guestNo, Context context) {
-
+    public static void saveLog(int eventId, int byUserId, String lByUserName, String guestName, int conditionNo, int guestNo, Context context) {
+        if (conditionNo == -1) {return;}
         Builders.Any.U ionBuilder = Ion.with(context)
                 .load(PriseWebAppFactors.URL_SAVE_LOG)
                 .setBodyParameter("userid", String.valueOf(byUserId))
@@ -483,7 +483,7 @@ public class PriseEngine {
                 .setBodyParameter("user_actname", lByUserName)
                 .setBodyParameter("guestname", guestName);
         try {
-            switch (ConditionNo) {
+            switch (conditionNo) {
                 case 0:
                     ionBuilder.setBodyParameter("logtype", String.valueOf(11))
                             .asString(Charset.forName(PriseWebAppFactors.CHARSET_UTF8))
@@ -518,7 +518,7 @@ public class PriseEngine {
                             .get();
                     break;
                 default:
-                    Log.v("saveLog", "Unexpected ConditionNo : " + ConditionNo);
+                    Log.v("saveLog", "Unexpected ConditionNo : " + conditionNo);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

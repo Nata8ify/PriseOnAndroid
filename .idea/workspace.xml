@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d97de16-6635-4865-93d8-5fa4e7bae1d0" name="Default" comment="">
@@ -16,8 +16,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/LoginMainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/LoginMainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/ViewGuestActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/ViewGuestActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/GuestAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/GuestAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/PriseEngine.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/PriseEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_guest.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_guest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="PriseOnAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,9 +55,25 @@
       <file leaf-file-name="InsertGuestActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/InsertGuestActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="119">
               <caret line="143" column="37" lean-forward="false" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuestAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/GuestAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="159" column="54" lean-forward="false" selection-start-line="159" selection-start-column="54" selection-end-line="159" selection-end-column="54" />
+              <folding>
+                <element signature="e#4972#6710#0" expanded="true" />
+                <element signature="e#5261#6608#0" expanded="true" />
+                <element signature="e#6607#6608#0" expanded="true" />
+                <element signature="e#6709#6710#0" expanded="true" />
+                <element signature="e#7004#7040#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,20 +81,133 @@
       <file leaf-file-name="PriseEngine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/PriseEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="225" column="9" lean-forward="false" selection-start-line="225" selection-start-column="9" selection-end-line="225" selection-end-column="9" />
+            <state relative-caret-position="-374">
+              <caret line="485" column="34" lean-forward="false" selection-start-line="485" selection-start-column="34" selection-end-line="485" selection-end-column="34" />
+              <folding>
+                <element signature="e#11753#11818#0" expanded="true" />
+                <element signature="e#11863#11930#0" expanded="true" />
+                <element signature="e#11975#12041#0" expanded="true" />
+                <element signature="e#12086#12154#0" expanded="true" />
+                <element signature="e#12199#12265#0" expanded="true" />
+                <element signature="e#19133#19141#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/LogActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="108" column="6" lean-forward="false" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
+              <folding>
+                <element signature="e#2457#3526#0" expanded="true" />
+                <element signature="e#3525#3526#0" expanded="true" />
+                <element signature="e#5722#6858#0" expanded="true" />
+                <element signature="e#6125#6731#0" expanded="true" />
+                <element signature="e#6730#6731#0" expanded="true" />
+                <element signature="e#6857#6858#0" expanded="true" />
+                <element signature="e#6909#7445#0" expanded="true" />
+                <element signature="e#7444#7445#0" expanded="true" />
+                <marker date="1517584824161" expanded="false" signature="8322:8382" ph="&quot;กำลังดำเนินการ...&quot;" />
+                <marker date="1517584824161" expanded="false" signature="8705:8720" ph=" { " />
+                <marker date="1517584824161" expanded="false" signature="8745:8755" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_view_guest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_guest.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="141" column="29" lean-forward="false" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginMainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewEventActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/ViewEventActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1114">
+              <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1818#2171#0" expanded="true" />
+                <element signature="e#2170#2171#0" expanded="true" />
+                <marker date="1517584824184" expanded="false" signature="2221:2394" ph="(parent, view, position, id) → {" />
+                <marker date="1517584824184" expanded="false" signature="2532:2596" ph="&quot;ลบ&quot;" />
+                <marker date="1517584824184" expanded="false" signature="2599:2761" ph="(dialog, which) → {" />
+                <marker date="1517584824184" expanded="false" signature="3038:3106" ph="&quot;แน่ใจหรือไม่?&quot;" />
+                <marker date="1517584824184" expanded="false" signature="3175:3236" ph="&quot;ใช่&quot;" />
+                <marker date="1517584824184" expanded="false" signature="3238:3448" ph="(dialog, which) → {" />
+                <marker date="1517584824184" expanded="false" signature="3790:3845" ph="}" />
+                <marker date="1517584824184" expanded="false" signature="3914:3974" ph="&quot;ไม่&quot;" />
+                <marker date="1517584824184" expanded="false" signature="4569:4600" ph="}" />
+                <marker date="1517584824184" expanded="false" signature="4710:4725" ph="}" />
+                <marker date="1517584824184" expanded="false" signature="5055:5066" ph=" { " />
+                <marker date="1517584824184" expanded="false" signature="5084:5090" ph=" }" />
+                <marker date="1517584824184" expanded="false" signature="6304:6347" ph="&quot;กำลังดำเนินการ...&quot;" />
+                <marker date="1517584824184" expanded="false" signature="6462:6477" ph=" { " />
+                <marker date="1517584824184" expanded="false" signature="6502:6512" ph=" }" />
+                <marker date="1517584824184" expanded="false" signature="6830:6908" ph="(Runnable) () → {" />
+                <marker date="1517584824184" expanded="false" signature="7247:7266" ph="}" />
+                <marker date="1517584824184" expanded="false" signature="7561:7576" ph=" { " />
+                <marker date="1517584824184" expanded="false" signature="7599:7609" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewGuestActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/ViewGuestActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="417" column="18" lean-forward="true" selection-start-line="417" selection-start-column="18" selection-end-line="417" selection-end-column="18" />
+              <folding>
+                <marker date="1517585300682" expanded="false" signature="22842:22920" ph="(Runnable) () → {" />
+                <marker date="1517585300682" expanded="false" signature="23675:23694" ph="}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginMainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/LoginMainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="161" column="37" lean-forward="false" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+            <state relative-caret-position="204">
+              <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
               <folding>
-                <marker date="1517463973837" expanded="false" signature="7227:7281" ph="getResources().getString(R.string.login_login_no_user)" />
+                <marker date="1517584824182" expanded="false" signature="1829:1840" ph=" { " />
+                <marker date="1517584824182" expanded="false" signature="1879:1885" ph=" }" />
+                <marker date="1517584824182" expanded="true" signature="1925:2888" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="1989:2674" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="2104:2120" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="2232:2571" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="2648:2664" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="2726:2838" ph="(view) → { " />
+                <marker date="1517584824182" expanded="true" signature="2856:2880" ph=" }" />
+                <marker date="1517584824182" expanded="true" signature="2890:3056" ph="//..." />
+                <marker date="1517584824182" expanded="true" signature="3114:3720" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="3283:3316" ph="&quot;กรุณากรอกชื่อผู้ใช้งานหรือรหัสผ่านให้ครบถ้วน&quot;" />
+                <marker date="1517584824182" expanded="true" signature="3785:7883" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="3935:4186" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="4040:4106" ph="&quot;กำลังดำเนินการ...&quot;" />
+                <marker date="1517584824182" expanded="true" signature="4262:6695" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="6218:6430" ph="//..." />
+                <marker date="1517584824182" expanded="true" signature="6764:7877" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="7054:7782" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="7170:7313" ph="{...}" />
+                <marker date="1517584824182" expanded="false" signature="7227:7281" ph="getResources().getString(R.string.login_login_no_user)" />
+                <marker date="1517584824182" expanded="true" signature="7427:7458" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="7575:7607" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="7724:7756" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="7932:8004" ph="{...}" />
+                <marker date="1517584824182" expanded="true" signature="8055:8165" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -96,6 +228,7 @@
       <find>alert</find>
       <find>GuestAdapter</find>
       <find>listwGuests</find>
+      <find>save</find>
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
@@ -1720,7 +1853,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_view_guest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_log_adapter.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/EventLogging.java" />
@@ -1730,8 +1862,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_log.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/User.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/WelcomeMenuActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/GuestAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/ViewGuestActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/guestmsg_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/GuestNameAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/message_dialog.xml" />
@@ -1744,8 +1874,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/PriseWebAppFactors.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_guestinfo_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/ExtraUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/PriseEngine.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/LoginMainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/GuestAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/PriseEngine.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_view_guest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/ViewGuestActivity.java" />
       </list>
     </option>
   </component>
@@ -1773,10 +1906,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1874,10 +2006,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prise" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1913,6 +2041,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="prise" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1927,6 +2059,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2034,7 +2167,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517464220667" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517585814057" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2082,7 +2215,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517464220668" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517585814057" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2114,27 +2247,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2265,7 +2377,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517464220676" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517585814060" />
       </method>
     </configuration>
     <list size="1">
@@ -2349,29 +2461,30 @@
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.62286687" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.62286687" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.63071895" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4248366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2396,7 +2509,6 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.63071895" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2593,16 +2705,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_guest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="152" column="61" lean-forward="false" selection-start-line="152" selection-start-column="61" selection-end-line="152" selection-end-column="61" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/EventLogging.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -2709,13 +2811,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/LogActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="138" column="40" lean-forward="false" selection-start-line="138" selection-start-column="40" selection-end-line="138" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -2748,21 +2843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/ViewEventActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="35" />
-          <folding>
-            <element signature="e#5056#5057#0" expanded="false" />
-            <element signature="e#5089#5090#0" expanded="false" />
-            <element signature="e#6463#6464#0" expanded="false" />
-            <element signature="e#6511#6512#0" expanded="false" />
-            <element signature="e#7562#7563#0" expanded="false" />
-            <element signature="e#7608#7609#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -2791,37 +2871,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/GuestAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="25" />
+        <state relative-caret-position="357">
+          <caret line="159" column="54" lean-forward="false" selection-start-line="159" selection-start-column="54" selection-end-line="159" selection-end-column="54" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#838#839#0" expanded="false" />
-            <element signature="e#869#870#0" expanded="false" />
-            <element signature="e#914#915#0" expanded="false" />
-            <element signature="e#954#955#0" expanded="false" />
-            <element signature="e#987#988#0" expanded="false" />
-            <element signature="e#1019#1020#0" expanded="false" />
-            <element signature="e#1066#1067#0" expanded="false" />
-            <element signature="e#1108#1109#0" expanded="false" />
-            <element signature="e#1159#1160#0" expanded="false" />
-            <element signature="e#1196#1197#0" expanded="false" />
-            <element signature="e#1350#1351#0" expanded="false" />
-            <element signature="e#1381#1382#0" expanded="false" />
-            <element signature="e#1426#1427#0" expanded="false" />
-            <element signature="e#1466#1467#0" expanded="false" />
-            <element signature="e#1515#1516#0" expanded="false" />
-            <element signature="e#1545#1546#0" expanded="false" />
-            <element signature="e#1592#1593#0" expanded="false" />
-            <element signature="e#1630#1631#0" expanded="false" />
+            <element signature="e#4972#6710#0" expanded="true" />
+            <element signature="e#5261#6608#0" expanded="true" />
+            <element signature="e#6607#6608#0" expanded="true" />
+            <element signature="e#6709#6710#0" expanded="true" />
+            <element signature="e#7004#7040#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/ViewGuestActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="131" column="39" lean-forward="false" selection-start-line="131" selection-start-column="39" selection-end-line="131" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2845,32 +2903,136 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="69" column="5" lean-forward="false" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/InsertGuestActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="119">
           <caret line="143" column="37" lean-forward="false" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/PriseEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="225" column="9" lean-forward="false" selection-start-line="225" selection-start-column="9" selection-end-line="225" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/LoginMainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="161" column="37" lean-forward="false" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+        <state relative-caret-position="204">
+          <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding>
-            <marker date="1517463973837" expanded="false" signature="7227:7281" ph="getResources().getString(R.string.login_login_no_user)" />
+            <marker date="1517584824182" expanded="false" signature="1829:1840" ph=" { " />
+            <marker date="1517584824182" expanded="false" signature="1879:1885" ph=" }" />
+            <marker date="1517584824182" expanded="true" signature="1925:2888" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="1989:2674" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="2104:2120" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="2232:2571" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="2648:2664" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="2726:2838" ph="(view) → { " />
+            <marker date="1517584824182" expanded="true" signature="2856:2880" ph=" }" />
+            <marker date="1517584824182" expanded="true" signature="2890:3056" ph="//..." />
+            <marker date="1517584824182" expanded="true" signature="3114:3720" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="3283:3316" ph="&quot;กรุณากรอกชื่อผู้ใช้งานหรือรหัสผ่านให้ครบถ้วน&quot;" />
+            <marker date="1517584824182" expanded="true" signature="3785:7883" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="3935:4186" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="4040:4106" ph="&quot;กำลังดำเนินการ...&quot;" />
+            <marker date="1517584824182" expanded="true" signature="4262:6695" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="6218:6430" ph="//..." />
+            <marker date="1517584824182" expanded="true" signature="6764:7877" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="7054:7782" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="7170:7313" ph="{...}" />
+            <marker date="1517584824182" expanded="false" signature="7227:7281" ph="getResources().getString(R.string.login_login_no_user)" />
+            <marker date="1517584824182" expanded="true" signature="7427:7458" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="7575:7607" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="7724:7756" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="7932:8004" ph="{...}" />
+            <marker date="1517584824182" expanded="true" signature="8055:8165" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/extra/PriseEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="485" column="34" lean-forward="false" selection-start-line="485" selection-start-column="34" selection-end-line="485" selection-end-column="34" />
+          <folding>
+            <element signature="e#11753#11818#0" expanded="true" />
+            <element signature="e#11863#11930#0" expanded="true" />
+            <element signature="e#11975#12041#0" expanded="true" />
+            <element signature="e#12086#12154#0" expanded="true" />
+            <element signature="e#12199#12265#0" expanded="true" />
+            <element signature="e#19133#19141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/LogActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="108" column="6" lean-forward="false" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
+          <folding>
+            <element signature="e#2457#3526#0" expanded="true" />
+            <element signature="e#3525#3526#0" expanded="true" />
+            <element signature="e#5722#6858#0" expanded="true" />
+            <element signature="e#6125#6731#0" expanded="true" />
+            <element signature="e#6730#6731#0" expanded="true" />
+            <element signature="e#6857#6858#0" expanded="true" />
+            <element signature="e#6909#7445#0" expanded="true" />
+            <element signature="e#7444#7445#0" expanded="true" />
+            <marker date="1517584824161" expanded="false" signature="8322:8382" ph="&quot;กำลังดำเนินการ...&quot;" />
+            <marker date="1517584824161" expanded="false" signature="8705:8720" ph=" { " />
+            <marker date="1517584824161" expanded="false" signature="8745:8755" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_guest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="141" column="29" lean-forward="false" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/ViewEventActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1114">
+          <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1818#2171#0" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="true" />
+            <marker date="1517584824184" expanded="false" signature="2221:2394" ph="(parent, view, position, id) → {" />
+            <marker date="1517584824184" expanded="false" signature="2532:2596" ph="&quot;ลบ&quot;" />
+            <marker date="1517584824184" expanded="false" signature="2599:2761" ph="(dialog, which) → {" />
+            <marker date="1517584824184" expanded="false" signature="3038:3106" ph="&quot;แน่ใจหรือไม่?&quot;" />
+            <marker date="1517584824184" expanded="false" signature="3175:3236" ph="&quot;ใช่&quot;" />
+            <marker date="1517584824184" expanded="false" signature="3238:3448" ph="(dialog, which) → {" />
+            <marker date="1517584824184" expanded="false" signature="3790:3845" ph="}" />
+            <marker date="1517584824184" expanded="false" signature="3914:3974" ph="&quot;ไม่&quot;" />
+            <marker date="1517584824184" expanded="false" signature="4569:4600" ph="}" />
+            <marker date="1517584824184" expanded="false" signature="4710:4725" ph="}" />
+            <marker date="1517584824184" expanded="false" signature="5055:5066" ph=" { " />
+            <marker date="1517584824184" expanded="false" signature="5084:5090" ph=" }" />
+            <marker date="1517584824184" expanded="false" signature="6304:6347" ph="&quot;กำลังดำเนินการ...&quot;" />
+            <marker date="1517584824184" expanded="false" signature="6462:6477" ph=" { " />
+            <marker date="1517584824184" expanded="false" signature="6502:6512" ph=" }" />
+            <marker date="1517584824184" expanded="false" signature="6830:6908" ph="(Runnable) () → {" />
+            <marker date="1517584824184" expanded="false" signature="7247:7266" ph="}" />
+            <marker date="1517584824184" expanded="false" signature="7561:7576" ph=" { " />
+            <marker date="1517584824184" expanded="false" signature="7599:7609" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/trag/quartierlatin/prise/ViewGuestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="417" column="18" lean-forward="true" selection-start-line="417" selection-start-column="18" selection-end-line="417" selection-end-column="18" />
+          <folding>
+            <marker date="1517585300682" expanded="false" signature="22842:22920" ph="(Runnable) () → {" />
+            <marker date="1517585300682" expanded="false" signature="23675:23694" ph="}" />
           </folding>
         </state>
       </provider>

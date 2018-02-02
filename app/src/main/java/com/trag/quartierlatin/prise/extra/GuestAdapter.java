@@ -155,10 +155,10 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
                                             conditionNo = 5;
                                             break;
                                     }
-                                    if (conditionNo != -1) {
+
                                         new StatusUpdateAsyncTask().execute(which, GuestAdapter.this.getGuestArrayList(), position);
                                         PriseEngine.saveLog(guest.getEventId(), guest.getUserId(), User.actName, guest.getGuestName(), conditionNo, guest.getGuestNo(), context);
-                                    }
+
                                 }
                             }
                         })
