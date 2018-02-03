@@ -104,6 +104,7 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
         TextView txtAward = (TextView) row.findViewById(R.id.txt_award);
         TextView txtGuestCorp = (TextView) row.findViewById(R.id.txt_corp);
         TextView txtGuestName = (TextView) row.findViewById(R.id.txt_name);
+        TextView txtPosition = (TextView) row.findViewById(R.id.txt_position);
 //        Spinner statusSpinner = (Spinner)row.findViewById(R.id.statusspinner);
         ImageView imgStatus = (ImageView) row.findViewById(R.id.img_status);
 //        Button btnSample = (Button)row.findViewById(R.id.btnSample);
@@ -115,6 +116,13 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
         txtSeatRow.setText(guest.getSeatRow().equals("") ? "-" : guest.getSeatRow());
         txtSeatNo.setText(guest.getSeatNo().equals("") ? "-" : guest.getSeatNo());
         txtAward.setText(context.getResources().getString(R.string.viewguest_award) + " " + guest.getAward() + "");
+        txtPosition.setText(guest.getPosition());
+        if(guest.getPosition() != null){
+            if(guest.getPosition().equals("")){txtGuestCorp.setVisibility(View.GONE);}
+            txtPosition.setText(guest.getCorp());
+        } else {
+            txtPosition.setVisibility(View.GONE);
+        }
         if(guest.getCorp() != null){
             if(guest.getCorp().equals("")){txtGuestCorp.setVisibility(View.GONE);}
             txtGuestCorp.setText(guest.getCorp());

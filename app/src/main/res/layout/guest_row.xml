@@ -49,16 +49,7 @@
         android:layout_toEndOf="@id/txt_seat_no_title"
         android:padding="6dp"
         android:textStyle="bold"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="10dp"
-        android:text="HatariFan Award"
-        android:id="@+id/txt_award"
-        android:padding="6dp"
-        android:layout_below="@+id/txt_name"
-        android:layout_toEndOf="@+id/img_status"
-        android:paddingBottom="5dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,12 +65,36 @@
         android:layout_height="wrap_content"
         android:textSize="15dp"
         android:layout_toEndOf="@id/img_status"
-        android:text="Sir. Nott Availabler of Again"
+        android:text="Nott Availabler"
         android:textStyle="bold"
         android:id="@+id/txt_name"
         android:layout_below="@id/txt_corp"
         android:paddingLeft="6dp"
         android:paddingBottom="0dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:text="CTO"
+        android:id="@+id/txt_position"
+        android:paddingLeft="6dp"
+        android:paddingTop="0dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/txt_name"
+        android:layout_toEndOf="@+id/img_status"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="HatariFan Award"
+        android:id="@+id/txt_award"
+        android:padding="6dp"
+        android:layout_below="@+id/txt_position"
+        android:layout_toEndOf="@+id/img_status"
+        android:paddingBottom="5dp"/>
     <!--<Spinner-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
