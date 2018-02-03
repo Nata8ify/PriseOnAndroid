@@ -8,8 +8,8 @@ android {
         applicationId "com.trag.quartierlatin.prise"
         minSdkVersion 19
         targetSdkVersion 23
-        versionCode 17
-        versionName "1.53"
+        versionCode 18
+        versionName "1.54"
     }
     buildTypes {
         release {

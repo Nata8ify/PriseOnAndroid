@@ -218,7 +218,7 @@ public class ViewGuestActivity extends AppCompatActivity {
                 if (!isDestroyed()) {
                     update();
                 }
-                dataChangeHandler.postDelayed(this, 15000);
+                dataChangeHandler.postDelayed(this, 2000);
             }
         };
         dataChangeRunnable.run();
