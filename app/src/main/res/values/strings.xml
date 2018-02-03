@@ -193,6 +193,8 @@
 
     <string name="action_settings">ตั้งค่า</string>
     <string name="areyousure">แน่ใจหรือไม่?</string>
+    <string name="more_backpress_quit_app">กดกลับอีกครั้งเพื่ออกจากแอปพลิเคชัน</string>
+    <string name="more_backpress_quit_act">กดกลับอีกครั้งเพื่ออกจากหน้านี้</string>
     <!---->
     <array name="status">
         <item>พร้อม</item>

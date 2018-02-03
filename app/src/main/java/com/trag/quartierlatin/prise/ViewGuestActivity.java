@@ -295,12 +295,28 @@ public class ViewGuestActivity extends AppCompatActivity {
         doGuestList();
     }
 
+    private boolean isSingleBackPressed;
+    private final Handler BACK_PRESS_HANDLER = new Handler();
+    private final Runnable BACK_PRESS_RUNNABLE = new Runnable() {
+        @Override
+        public void run() {
+            isSingleBackPressed = false;
+        }
+    };
+
     @Override
     public void onBackPressed() {
         if (btnFabOperationRoot.isOpened()) {
             btnFabOperationRoot.close(false);
         } else {
-            super.onBackPressed();
+            if(isSingleBackPressed){
+                finish();
+                return;
+            }
+            isSingleBackPressed = true;
+            Toast.makeText(this, getString(R.string.more_backpress_quit_act), Toast.LENGTH_SHORT).show();
+            BACK_PRESS_HANDLER.postDelayed(BACK_PRESS_RUNNABLE, 2000);
+            //super.onBackPressed();
         }
     }
 
@@ -415,7 +431,7 @@ public class ViewGuestActivity extends AppCompatActivity {
                 update();
                 btnFabOperationRoot.close(true);
                 break;
-           /* case R.id.btn_fab_log :
+           /*case R.id.btn_fab_log :
                 Intent logIntext = new Intent(ViewGuestActivity.this, LogActivity.class);
                 startActivity(logIntext);
                 btnFabOperationRoot.close(true);

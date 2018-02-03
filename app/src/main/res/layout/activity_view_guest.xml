@@ -156,6 +156,7 @@
             fab:fab_label="@string/viewguest_fab_menu_log"
             fab:fab_size="mini"
 
-            android:visibility="gone"/>
+            android:visibility="gone"
+/>
     </com.github.clans.fab.FloatingActionMenu>
 </RelativeLayout>

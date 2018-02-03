@@ -102,6 +102,7 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
         TextView txtSeatRow = (TextView) row.findViewById(R.id.txt_seat_row);
         TextView txtSeatNo = (TextView) row.findViewById(R.id.txt_seat_no);
         TextView txtAward = (TextView) row.findViewById(R.id.txt_award);
+        TextView txtGuestCorp = (TextView) row.findViewById(R.id.txt_corp);
         TextView txtGuestName = (TextView) row.findViewById(R.id.txt_name);
 //        Spinner statusSpinner = (Spinner)row.findViewById(R.id.statusspinner);
         ImageView imgStatus = (ImageView) row.findViewById(R.id.img_status);
@@ -114,6 +115,12 @@ public class GuestAdapter extends ArrayAdapter<Guest> {
         txtSeatRow.setText(guest.getSeatRow().equals("") ? "-" : guest.getSeatRow());
         txtSeatNo.setText(guest.getSeatNo().equals("") ? "-" : guest.getSeatNo());
         txtAward.setText(context.getResources().getString(R.string.viewguest_award) + " " + guest.getAward() + "");
+        if(guest.getCorp() != null){
+            if(guest.getCorp().equals("")){txtGuestCorp.setVisibility(View.GONE);}
+            txtGuestCorp.setText(guest.getCorp());
+        } else {
+            txtGuestCorp.setVisibility(View.GONE);
+        }
         txtGuestName.setText(guest.getGuestName());
         switch (guest.getStatus()) {
             case 1:

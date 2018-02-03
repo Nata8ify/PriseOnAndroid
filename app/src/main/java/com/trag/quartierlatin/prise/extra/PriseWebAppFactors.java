@@ -4,7 +4,8 @@ package com.trag.quartierlatin.prise.extra;
  * Created by QuartierLatin on 8/6/2559.
  */
 public class PriseWebAppFactors {
-    protected static final String HTTP_HOST = "http://my.nata8ify.me:8080/Prise";
+    protected static final String HTTP_HOST = "https://prise.kmutt.ac.th/Prise";
+//    protected static final String HTTP_HOST = "http://my.nata8ify.me:8080/Prise";
 //    protected static final String HTTP_HOST = "http://localhost:8080//Prise";
     public static final String URL_APP_LOGIN = HTTP_HOST+"/Login?opt=app";
     public static final String URL_APP_REGISTER = HTTP_HOST+"/Seem?to=signUp";

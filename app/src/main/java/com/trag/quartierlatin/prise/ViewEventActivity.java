@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.trag.quartierlatin.prise.extra.Event;
 import com.trag.quartierlatin.prise.extra.EventAdapter;
@@ -181,6 +182,25 @@ public class ViewEventActivity extends AppCompatActivity {
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
         }
+    }
+
+    private boolean isSingleBackPressed;
+    private final Handler BACK_PRESS_HANDLER = new Handler();
+    private final Runnable BACK_PRESS_RUNNABLE = new Runnable() {
+        @Override
+        public void run() {
+            isSingleBackPressed = false;
+        }
+    };
+    @Override
+    public void onBackPressed() {
+        if(isSingleBackPressed){
+            finish();
+            return;
+        }
+        isSingleBackPressed = true;
+        Toast.makeText(this, getString(R.string.more_backpress_quit_app), Toast.LENGTH_SHORT).show();
+        BACK_PRESS_HANDLER.postDelayed(BACK_PRESS_RUNNABLE, 2000);
     }
 }
 
